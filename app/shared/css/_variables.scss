@@ -1,0 +1,58 @@
+//color-emotion
+$color-emotion-primary: #4d90fe;
+$color-emotion-success: #35aa47;
+$color-emotion-warning: #faa937;
+$color-emotion-danger: #d84a38;
+$color-emotion-info: #5bc0de;
+//color-gray
+$color-gray-black: lighten(#000, 0%); // #000
+$color-gray-darker: lighten(#000, 13.5%); // #222
+$color-gray-dark: lighten(#000, 20%); // #333
+$color-gray: lighten(#000, 33.5%); // #555
+$color-gray-light: lighten(#000, 46.7%); // #777
+$color-gray-lighter: lighten(#000, 93.5%); // #eee
+$color-gray-white: lighten(#000, 100%); // #fff
+//color-transparent
+$color-transparent-darkest:rgba(0, 0, 0, 0.3);
+$color-transparent-darker:rgba(0, 0, 0, 0.2);
+$color-transparent-dark:rgba(0, 0, 0, 0.1);
+$color-transparent-0:rgba(0, 0, 0, 0);
+$color-transparent-light:rgba(255, 255, 255, 0.1);
+$color-transparent-lighter:rgba(255, 255, 255, 0.2);
+$color-transparent-lightest:rgba(255, 255, 255, 0.3);
+//color-basic
+$color-basic-bg-component: $color-gray-white;
+$color-basic-text: $color-gray-darker;
+$color-basic-text-light: $color-gray-light;
+$color-basic-background:#f1f1f1;
+$color-basic-border:#e2e2e2;
+//color-app
+$color-app-primary-dark: #04345d;
+$color-app-primary:#0868b9;
+$color-app-primary-light: #0b90ff;
+$color-app-accent: #333339;
+$color-app-primary-text: $color-gray-white;
+//dimens
+$dimens-dp:1.2rem;
+$dimens-font-size:1.1 * $dimens-dp;
+$dimens-item-width:12.4 * $dimens-dp;
+$dimens-item-height:3 * $dimens-dp;
+$dimens-nav-top-item-height:4 * $dimens-dp;
+$dimens-nav-left-item-height:3 * $dimens-dp;
+$dimens-padding:0.5 * $dimens-dp;
+$dimens-border-width: 0.1 * $dimens-dp;
+
+/*funtion*/
+
+@mixin Opacity($value) {
+    $IEValue: $value*100;
+    //  opacity: $value;
+    background-color: agba('', $value);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

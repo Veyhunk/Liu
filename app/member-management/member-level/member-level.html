@@ -1,0 +1,32 @@
+<section ng-controller="MemberLevelCtrl as memberLevel">
+    会员等级 添加 编辑 删除
+    <div>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>等级名称</th>
+                    <th>积分率</th>
+                    <th>折扣率</th>
+                    <th>是否可升级</th>
+                    <th>升级所需积分</th>
+                    <th>升级后等级</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in memberLevel.list">
+                    <td>{{$index}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.point_rate}}</td>
+                    <td>{{item.discount_rate}}</td>
+                    <td>{{item.allow_upgrade}}</td>
+                    <td>{{item.upgrade_point}}</td>
+                    <td>{{item.next_level}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>

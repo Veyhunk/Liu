@@ -1,0 +1,115 @@
+{
+    "data": [{
+            "id": 1,
+            "payment_record": 1,
+            "member": {
+                "id": 8,
+                "name": "小t",
+                "code": "1234567890"
+            },
+            "store": 2,
+            "operator": 1,
+            "order_code": "GS12312312312",
+            "type": 1,
+            "expenditure": 222,
+            "discount_expenditure": 220,
+            "total_reward_points": 100,
+            "points": 400,
+            "balance": 200,
+            "datetime": "2016-07-02 23:23:23",
+            "items": [{
+                "id": 1,
+                "goods": {
+                    "id": 5,
+                    "operator": 1,
+                    "store": 1,
+                    "class": 1,
+                    "code": "20161112121345",
+                    "name": "帮宝适",
+                    "portrait": "太黄没有链接",
+                    "short_name": "BBS",
+                    "unit": "包",
+                    "type": 1,
+                    "exchange_points": 0,
+                    "discount_rate": 0,
+                    "lowest_discount_rate": 0,
+                    "inventory": 2,
+                    "reward_points": 10,
+                    "entry_price": 22.5,
+                    "sale_price": 55.8,
+                    "remark": "最低折扣率是防止此商品多种打折方式叠加后价格过低的情况。"
+                },
+                "sale_price": 60,
+                "discount_price": 58,
+                "quantities": 2,
+                "reward_points": 22
+            }]
+        }, {
+            "id": 2,
+            "payment_record": 1,
+            "member": {
+                "id": 8,
+                "name": "小t",
+                "code": "1234567890"
+            },
+            "store": 2,
+            "operator": 1,
+            "order_code": "KS12312312313",
+            "type": 2,
+            "expenditure": 222,
+            "discount_expenditure": 220,
+            "total_reward_points": 100,
+            "points": 400,
+            "balance": 200,
+            "datetime": "2016-07-02 23:23:23",
+            "items": []
+        },
+        {
+            "id": 3,
+            "payment_record": 1,
+            "member": {
+                "id": 8,
+                "name": "小t",
+                "code": "1234567890"
+            },
+            "store": 2,
+            "operator": 1,
+            "order_code": "GS12312312314",
+            "type": 1,
+            "expenditure": 222,
+            "discount_expenditure": 220,
+            "total_reward_points": 100,
+            "points": 400,
+            "balance": 200,
+            "datetime": "2016-07-02 23:23:23",
+            "items": [{
+                "id": 1,
+                "goods": {
+                    "id": 5,
+                    "operator": 1,
+                    "store": 1,
+                    "class": 1,
+                    "code": "20161112121345",
+                    "name": "帮宝适",
+                    "portrait": "太黄没有链接",
+                    "short_name": "BBS",
+                    "unit": "包",
+                    "type": 1,
+                    "exchange_points": 0,
+                    "discount_rate": 0,
+                    "lowest_discount_rate": 0,
+                    "inventory": 2,
+                    "reward_points": 10,
+                    "entry_price": 22.5,
+                    "sale_price": 55.8,
+                    "remark": "最低折扣率是防止此商品多种打折方式叠加后价格过低的情况。"
+                },
+                "sale_price": 60,
+                "discount_price": 58,
+                "quantities": 2,
+                "reward_points": 22
+            }]
+        }
+    ],
+    "records": 111
+}

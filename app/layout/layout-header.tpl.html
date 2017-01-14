@@ -1,0 +1,51 @@
+<header id="header" system-version="{{layout.Version}}">
+    <nav class="navbar-nav">
+        <ul class="nav nav-tabs nav-tabs-google pull-center">
+            <li ng-class="{'active':layout.state.includes('app.home')}">
+                <a ui-sref="app.home">首页</a>
+            </li>
+            <li ng-repeat="item in layout.mainMenus |orderBy:'sort'" ng-class="{'active':layout.state.includes(item.url)}">
+                <a href="">{{item.name}}</a>
+                <div class="sub-nav">
+                    <ul class="nav">
+                        <li ng-repeat="subItem in item.children|orderBy:'sort'" ui-sref-active="active"><a ui-sref="{{subItem.url}}">{{subItem.name}}</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!--
+    <div class="pull-right">
+        <button id="menu" class="nav-button">
+            <i class="fa fa-cog"></i>
+             设置
+        </button>
+    </div>
+    -->
+    <div class="navbar-left">
+        <!--参考下这个http://todc.github.io/todc-bootstrap/components/?#navbar-color-emotion-image-->
+        <div class="pull-left">
+            <div class="head-logo">
+                <!--<img src="http://placehold.it/30x30?text=logo">-->
+                <a href="#/home"><i class="fa fa-github-alt"></i></a>
+            </div>
+        </div>
+        <div class="pull-left">
+            <a href="#/home">
+                <div class="head-title">会员管理系统</div>
+            </a>
+        </div>
+    </div>
+    <div class="navbar-right">
+
+        <button id="menu" class="nav-button ">
+            <i class="fa fa-user"></i>{{layout.user.name}}
+        </button>
+        <button class="nav-button ">
+            <i class="fa fa-envelope"></i>消息
+        </button>
+        <button class="nav-button " ng-click="layout.logOut()">
+            <i class="fa fa-sign-out" ></i>注销
+        </button>
+    </div>
+</header>

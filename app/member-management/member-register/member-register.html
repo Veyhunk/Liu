@@ -1,0 +1,147 @@
+<section class="content-page pull-center" ng-controller="MemberRegisterCtrl as memberRegister">
+    <div class="content-page-head">
+        <button type="button" class="btn btn-clear pull-right"><i class="fa fa-refresh"></i> 重置</button>
+        <h2>会员登记</h2>
+    </div>
+    <hr>
+    <div class="content-page-body">
+        <form class="form-horizontal" name="memberRegisterForm">
+            <!-- Image -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">头像</label>
+                <div class="col-sm-6">
+                    <img src="app/shared/images/img.png" alt="..." class="img-rounded img-photo">
+                    <div class="img-photo-add"><button><i class="fa fa-plus"></i></button></div>
+                </div>
+            </div>
+            <!-- File inpu -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label">File input</label>
+                <div class="col-sm-6"> <input type="file">
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <p class="col-sm-3 help-block">help-block</p>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">会员卡号</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="会员卡面号码" ng-model="memberRegister.currentMember.code" required>
+                </div>
+                <label class="col-sm-3 help-block">*</label>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">姓名</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.name" required>
+                </div>
+                <label class="col-sm-3 help-block">*</label>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">支付密码</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" placeholder="余额支付密码" ng-model="memberRegister.currentMember.payment_password" required>
+                </div>
+                <label class="col-sm-3 help-block">*</label>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">重复密码</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" ng-blur="memberRegister.checkPaymentPassword()" placeholder="确认支付密码" ng-model="memberRegister.confirmPaymentPassword">
+                </div>
+                <label class="col-sm-3 help-block">*</label>
+                <p ng-hide="memberRegister.confirmedPaymentPassword">与支付密码不匹配，请重新核对后再输入！</p>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">手机</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.contact" required>
+                </div>
+                <label class="col-sm-3 help-block">*</label>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">身份证</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.identity">
+                </div>
+                <!--<label class="col-sm-3 help-block">*</label>-->
+            </div>
+            <!-- Select -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label">会员等级</label>
+                <div class=" col-sm-6">
+                    <select class="form-control" ng-options="item.id as item.name for item in memberRegister.levelList" ng-model="memberRegister.currentMember.level">
+                        
+                    </select>
+                </div>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">会员生日</label>
+                <div class="col-sm-6">
+                    <div class="input-group date" datetime-picker data-date-format="yyyy-mm-dd" datetime-picker-options="{ pickerPosition: 'bottom-left', minView: 'month'}">
+                        <input type='text' class="form-control" ng-model="memberRegister.currentMember.birthday" />
+                        <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <!--<label class="col-sm-3 help-block">*</label>-->
+            </div>
+            <!-- Checkboxes and radios -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label">性别</label>
+                <div class="col-sm-6">
+                    <label class="radio-inline">
+                    <input type="radio" ng-model="memberRegister.currentMember.sex"  value="1"> 男
+                    </label>
+                    <label class="radio-inline">
+                    <input type="radio" ng-model="memberRegister.currentMember.sex"  value="0"> 女
+                    </label>
+                </div>
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">余额</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.balance">
+                </div>
+                <!--<label class="col-sm-3 help-block">*</label>-->
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">积分</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.points">
+                </div>
+                <!--<label class="col-sm-3 help-block">*</label>-->
+            </div>
+            <!-- input -->
+            <div class="form-group ">
+                <label class="col-sm-3 control-label">地址</label>
+                <div class="col-sm-6">
+                    <input class="form-control" placeholder="" ng-model="memberRegister.currentMember.address">
+                </div>
+                <!--<label class="col-sm-3 help-block">*</label>-->
+            </div>
+            <!-- textarea -->
+            <div class="form-group">
+                <label class="col-sm-3 control-label">备注</label>
+                <div class="col-sm-6"><textarea class="form-control" rows="3" ng-model="memberRegister.currentMember.remark"></textarea></div>
+                <p class="col-sm-3 help-block">help-block</p>
+            </div>
+            <!-- button -->
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-6 ">
+                    <button type="button" class="btn btn-primary btn-block" ng-click="memberRegister.addMember(memberRegister.currentMember)" ng-disabled="!memberRegisterForm.$valid">保存</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>

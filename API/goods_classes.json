@@ -1,0 +1,29 @@
+[{
+    "id": 1,
+    "store": 1,
+    "operator": 1,
+    "name": "零食",
+    "parent": null,
+    "remark": "零食大类"
+}, {
+    "id": 2,
+    "store": 1,
+    "operator": 1,
+    "name": "饮料",
+    "parent": null,
+    "remark": "饮料大类"
+}, {
+    "id": 3,
+    "store": 1,
+    "operator": 1,
+    "name": "运动饮料",
+    "parent": 2,
+    "remark": "运动饮料"
+}, {
+    "id": 4,
+    "store": 1,
+    "operator": 1,
+    "name": "碳酸饮料",
+    "parent": 2,
+    "remark": "碳酸饮料"
+}]

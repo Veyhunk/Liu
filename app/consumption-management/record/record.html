@@ -1,0 +1,193 @@
+<section ng-controller="ConsumptionRecordCtrl as record" class="content-full-page  pull-center padding">
+    消费记录 如果item.items里面有内容的，点击订单编号可以展开查看详细消费记录
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>订单编号</th>
+                <th>会员姓名</th>
+                <th>会员卡号</th>
+                <th>消费类型</th>
+                <th>消费总额</th>
+                <th>折后总价</th>
+                <th>获得积分</th>
+                <th>卡内余额</th>
+                <th>消费时间</th>
+                <th>操作员</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="item in record.list">
+            <tr>
+                <td>{{$index+1}}</td>
+                <td ng-click="item.showSubItem = !item.showSubItem">{{item.order_code}}</td>
+                <td>{{item.member.name}}</td>
+                <td>{{item.member.code}}</td>
+                <td>{{item.type|dictionary:'consumption.types'}}</td>
+                <td>{{item.expenditure}}</td>
+                <td>{{item.discount_expenditure}}</td>
+                <td>{{item.total_reward_points}}</td>
+                <td>{{item.balance}}</td>
+                <td>{{item.datetime}}</td>
+                <td>{{item.operator}}</td>
+            </tr>
+            <tr ng-if="item.items.length" ng-show="item.showSubItem">
+                <th>序号</th>
+                <th>商品编码</th>
+                <th>商品名称</th>
+                <th>单价</th>
+                <th>折后单价</th>
+                <th>数量</th>
+                <th>实际消费金额</th>
+                <th>获得积分</th>
+            </tr>
+            <tr ng-repeat="subItem in item.items" ng-show="item.showSubItem">
+                <td>{{$index+1}}</td>
+                <td>{{subItem.goods.code}}</td>
+                <td>{{subItem.goods.name}}</td>
+                <td>{{subItem.sale_price}}</td>
+                <td>{{subItem.discount_price}}</td>
+                <td>{{subItem.quantities}}</td>
+                <td>{{subItem.quantities*subItem.discount_price}}</td>
+                <td>{{subItem.reward_points}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="content-page-head">
+        <h2>消费记录</h2>
+    </div>
+    <hr>
+    <div class="content-page-body">
+        <div class="content-page-body">
+            <nav class="navbar navbar-toolbar navbar-default">
+                <div class="container-fluid padding-0">
+                    <div class="collapse navbar-collapse bs-example-toolbar-collapse-1  padding-0">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a href=""><i class="fa fa-plus"></i> 添加</a></li>
+                            <li><a href=""><i class="fa fa-minus"></i> 删除</a></li>
+                            <li><a href=""><i class="fa fa-pencil"></i> 修改</a></li>
+                            <li class="dropdown"> <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> 筛选</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="">Action</a></li>
+                                    <li><a href="">Another action</a></li>
+                                    <li><a href="">Something else here</a></li>
+                                    <li class="divider" role="separator"></li>
+                                    <li><a href="">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!--<form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search">
+                            </div>
+                            <a class="btn" type="submit"><i class="fa fa-search"></i> 搜索</a>
+                        </form>-->
+
+                        <ul class="nav navbar-nav navbar-right  padding-0">
+                            <li><input type="text" style="height: 100%;background: #f2f2f2;border-width: 0;padding: 9px 15px;line-height: 18px;height: 36px;" placeholder="输入：卡号、姓名或手机"></li>
+                            <li><a class="" href=""><i class="fa fa-search"></i> 搜索</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>订单编号</th>
+                        <th>会员姓名</th>
+                        <th>会员卡号</th>
+                        <th>消费类型</th>
+                        <th>消费总额</th>
+                        <th>折后总价</th>
+                        <th>获得积分</th>
+                        <th>卡内余额</th>
+                        <th>消费时间</th>
+                        <th>操作员</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="item in record.list">
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td ng-click="item.showSubItem = !item.showSubItem">{{item.order_code}}</td>
+                        <td>{{item.member.name}}</td>
+                        <td>{{item.member.code}}</td>
+                        <td>{{item.type|dictionary:'consumption.types'}}</td>
+                        <td>{{item.expenditure}}</td>
+                        <td>{{item.discount_expenditure}}</td>
+                        <td>{{item.total_reward_points}}</td>
+                        <td>{{item.balance}}</td>
+                        <td>{{item.datetime}}</td>
+                        <td>{{item.operator}}</td>
+                    </tr>
+                    <tr ng-if="item.items.length" ng-show="item.showSubItem">
+                        <th>序号</th>
+                        <th>商品编码</th>
+                        <th>商品名称</th>
+                        <th>单价</th>
+                        <th>折后单价</th>
+                        <th>数量</th>
+                        <th>实际消费金额</th>
+                        <th>获得积分</th>
+                    </tr>
+                    <tr ng-repeat="subItem in item.items" ng-show="item.showSubItem">
+                        <td>{{$index+1}}</td>
+                        <td>{{subItem.goods.code}}</td>
+                        <td>{{subItem.goods.name}}</td>
+                        <td>{{subItem.sale_price}}</td>
+                        <td>{{subItem.discount_price}}</td>
+                        <td>{{subItem.quantities}}</td>
+                        <td>{{subItem.quantities*subItem.discount_price}}</td>
+                        <td>{{subItem.reward_points}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>卡号</th>
+                        <th>姓名</th>
+                        <th>手机</th>
+                        <th>余额</th>
+                        <th>积分</th>
+                        <th>总消费</th>
+                        <th>状态</th>
+                        <th>生日</th>
+                        <th>办卡日期</th>
+                        <th>办卡人员</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in memberList.list">
+                        <th scope="row">{{$index + 1}}</th>
+                        <td>{{item.code}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.contact}}</td>
+                        <td>{{item.balance}}</td>
+                        <td>{{item.points}}</td>
+                        <td>{{item.expenditure}}</td>
+                        <td>{{item.state | dictionary:'member.states'}}</td>
+                        <td>{{item.birthday}}</td>
+                        <td>{{item.enroll_date}}</td>
+                        <td>{{item.operator}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="Pagination pull-center">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                        <li class="active"><a href="">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href="" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</section>

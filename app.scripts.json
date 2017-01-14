@@ -1,0 +1,38 @@
+{
+    "chunks": {
+        "vendor": [
+            "jquery",
+            "lodash",
+            "angular",
+            "ui-router",
+            "bootstrap",
+            "moment",
+            "moment-local-zh-cn",
+            "restangular",
+            "angular-local-storage",
+            "bootstrap-datetimepicker",
+            "ui-bootstrap-custom",
+            "ui-bootstrap-custom-template",
+            "angular-ui-tree"
+        ],
+        "vendor.ui": [],
+        "vendor.datatables": [],
+        "vendor.graphs": []
+    },
+    "paths": {
+        "jquery": "bower_components/jquery/dist/jquery.min.js",
+        "lodash": "bower_components/lodash/dist/lodash.min.js",
+        "angular": "bower_components/angular/angular.min.js",
+        "ui-router": "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+        "bootstrap": "bower_components/todc-bootstrap/dist/js/bootstrap.min.js",
+        "moment": "bower_components/moment/min/moment.min.js",
+        "moment-local-zh-cn": "bower_components/moment/locale/zh-cn.js",
+        "restangular": "bower_components/restangular/dist/restangular.min.js",
+        "angular-local-storage": "bower_components/angular-local-storage/dist/angular-local-storage.min.js",
+        "angular-moment-picker": "bower_components/angular-moment-picker/dist/angular-moment-picker.min.js",
+        "bootstrap-datetimepicker": "bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js",
+        "ui-bootstrap-custom": "assets/lib/ui-bootstrap-custom/ui-bootstrap-custom-2.3.0.min.js",
+        "ui-bootstrap-custom-template": "assets/lib/ui-bootstrap-custom/ui-bootstrap-custom-tpls-2.3.0.min.js",
+        "angular-ui-tree": "bower_components/angular-ui-tree/dist/angular-ui-tree.min.js"
+    }
+}

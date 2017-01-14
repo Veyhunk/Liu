@@ -1,0 +1,26 @@
+{
+    "data": [{
+        "id": 1,
+        "goods": {
+            "code": "20161112121315",
+            "name": "安儿乐护舒宝"
+        },
+        "store": 1,
+        "price": 23,
+        "quantities": 22,
+        "is_sold_out": 0,
+        "last_update": "2016-07-08 22:33:00"
+    }, {
+        "id": 2,
+        "goods": {
+            "code": "20161112121315",
+            "name": "安儿乐护舒宝"
+        },
+        "store": 1,
+        "price": 24,
+        "quantities": 20,
+        "is_sold_out": 0,
+        "last_update": "2016-07-08 22:33:00"
+    }],
+    "records": 9
+}

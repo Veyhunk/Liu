@@ -1,0 +1,27 @@
+<section ng-controller="InventoryListCtrl as inventoryList">
+
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>商品编号</th>
+                <th>商品名称</th>
+                <th>商品分类</th>
+                <th>库存数量</th>
+                <th>进价</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in inventoryList.list">
+                <td>{{$index}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.point_rate}}</td>
+                <td>{{item.discount_rate}}</td>
+                <td>{{item.allow_upgrade}}</td>
+                <td>{{item.upgrade_point}}</td>
+                <td>{{item.next_level}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</section>
