@@ -27,7 +27,7 @@
 
         $urlRouterProvider.otherwise(function($injector, $location) {
 
-            $location.path('/login');
+            $location.path('/home');
         });
 
 

@@ -1,15 +1,18 @@
-<section ng-controller="LayoutCtrl as layout" id="layout">
-    <!-- HEADER -->
-    <div data-ng-include="'app/layout/layout-header.tpl.html'"></div>
-    <!-- END HEADER -->
-    <!-- MAIN PANEL -->
-    <div id="main" role="main">
-        <!-- Left panel : Navigation area -->
-        <div data-ng-include="'app/layout/left-panel.tpl.html'" id="left-menu" ng-class="{true:'left-menu-mini',false:'left-menu-full'}[layout.isShortcutMenusMini]"></div>
-        <div loading="layout.contentLoading" id="content-loading">
-            <div data-ui-view="content" id="content"></div>
-        </div>
+<!-- 使用nav标签来设置右导航栏 -->
+<nav id="menu">
+    <div class="inner">
+        <h2>导航栏</h2>
+        <ul class="links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#DesignBusiness">设计业务</a></li>
+            <li><a href="#TeamIntroduction">设计团队</a></li>
+            <li><a href="#ContactUs">联系我们</a></li>
+        </ul>
+        <a href="#menu" class="close">Close</a>
     </div>
-    <!--FOOTER-->
-    <div data-ng-include="'app/layout/layout-footer.tpl.html'"></div>
-</section>
+</nav>
+<div id="page-wrapper">
+    <!-- 导航栏 -->
+    <div data-ng-include="'app/layout/layout-header.tpl.html'"></div>
+    <div data-ui-view="content" id="content"></div>
+</div>
