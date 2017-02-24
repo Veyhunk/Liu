@@ -1,25 +1,25 @@
 {
-    "name": "sale_vip_management_system_web",
+    "name": "liu_design_web",
     "version": "1.0.0",
-    "description": "会员管理系统 Web 端开源项目",
+    "description": "Liu-design-WEB",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/HelloYu/SaleVIPManagementSystem-Web.git"
+        "url": "git+https://github.com/Veyhunk/Liu.git"
     },
     "keywords": [
-        "会员管理系统",
+        "Liu-design-WEB",
         "AngularJS"
     ],
     "author": "",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/HelloYu/SaleVIPManagementSystem-Web/issues"
+        "url": "https://github.com/Veyhunk/Liu/issues"
     },
-    "homepage": "https://github.com/HelloYu/SaleVIPManagementSystem-Web#readme",
+    "homepage": "https://github.com/Veyhunk/Liu#readme",
     "devDependencies": {
         "browser-sync": "^2.17.5",
         "eslint": "^3.11.1",
