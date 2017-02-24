@@ -1,0 +1,287 @@
+// ================================================4
+
+/* ==================== CSS Structure ==================== 
+1. COMMON STYLES
+	- Reset Styles
+	- Common Classes
+	- Pre Loader Styles
+	
+2. HTML ELEMENTS STYLE
+	- Button Styles
+
+3. HEADER SECTION
+	- Main Navigation Styles
+	- Home section
+	
+4. FEATURE SECTION
+========================================================== */
+
+
+/* --------------- Reset Styles --------------- */
+
+body {
+    overflow-x: hidden !important;
+}
+
+#section-feature {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .row>div {
+        padding: 0;
+        float: none;
+    }
+    a {
+        color: #cccccc;
+        text-decoration: none;
+    }
+    a:hover,
+    a:focus,
+    .btn:focus {
+        text-decoration: none;
+        outline: none;
+        color: #6c6b6b
+    }
+    input:focus,
+    textarea:focus {
+        outline: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Raleway', sans-serif;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+    h1 {
+        font-size: 72px;
+        line-height: 82px;
+    }
+    h2 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+    h3 {
+        font-size: 32px;
+        line-height: 45px;
+    }
+    h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    h5 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    ul,
+    ol {
+        padding-left: 0 !important;
+    }
+    li {
+        list-style: none;
+    }
+    .fancy-button {
+        position: relative;
+        border: 1px solid;
+        margin: 5px;
+        padding: 10px 25px;
+        text-decoration: none;
+        outline: none;
+        line-height: 100%;
+        overflow: hidden;
+        height: 40px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /* --------------- Common Classes --------------- */
+    .fixed {
+        position: fixed;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .relative {
+        position: relative;
+    }
+    /* =============== HTML element styles =============== */
+    /* --------------- Button Styles --------------- */
+    .button-line {
+        background: transparent;
+        display: inline-block;
+        font-weight: 400;
+        border-radius: 4px;
+        border: 1px solid;
+        margin: 10px;
+        overflow: visible;
+    }
+    /* ================ Features Section ================ */
+    .container {
+        width: auto !important;
+    }
+    .container.features {
+        padding-top: 132px;
+        padding-bottom: 190px;
+        vertical-align: middle;
+        position: relative;
+        margin-bottom: 0;
+        margin: auto;
+        display: block;
+    }
+    .baraja-container {
+        width: 250px;
+        height: 400px;
+    }
+    .baraja-container .single-feature {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .single-feature .feature-title {
+        margin-top: 18px;
+    }
+    .single-feature .feature-text {
+        line-height: 1.5;
+        padding: 0 10px;
+        margin-bottom: 16px;
+    }
+    .baraja-container .single-feature:hover {
+        -webkit-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
+        -o-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
+        box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
+    }
+    .baraja-container {
+        margin: 0 auto 30px;
+        position: relative;
+        padding: 0;
+        list-style-type: none;
+    }
+    .baraja-container li {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        cursor: pointer;
+        background: #fff;
+        pointer-events: auto;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .no-js .baraja-container {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .no-js .baraja-container li {
+        position: relative;
+        display: inline-block;
+        width: 200px;
+        height: 310px;
+        margin: 10px;
+    }
+    .single-feature .feature-image {}
+    .features-control {
+        margin: auto;
+        margin-top: 55px;
+        width: 253px;
+        z-index: 1020;
+    }
+    .control-icon {
+        position: absolute;
+        top: 0;
+        padding: 5px 15px;
+        font-size: 20px;
+        height: 46px;
+        line-height: 33px;
+        box-shadow: none;
+    }
+    .feature-link a {
+        color: #fff;
+        font-weight: 400;
+    }
+    .feature-link a i {
+        font-weight: 300;
+    }
+    .features-control #feature-prev {
+        left: 0px;
+    }
+    .features-control #feature-expand {
+        left: 60px;
+    }
+    .features-control #feature-close {
+        left: 120px;
+    }
+    .features-control #feature-next {
+        left: 180px;
+    }
+    /* ========== Responsive Styles ========== */
+    /* --------- Styles for Screen width between 768px To 1023px -------- */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .baraja-container {
+            width: 180px;
+            height: 275px;
+        }
+        .single-feature .feature-icon i {
+            font-size: 70px;
+        }
+        .single-feature .feature-title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .single-feature .feature-text {
+            display: none;
+        }
+    }
+    /* --------- Styles for Screen width Smaller than 767px -------- */
+    @media only screen and (max-width: 767px) {
+        .container.features {
+            padding-bottom: 120px;
+        }
+        .baraja-container {
+            width: 180px;
+            height: 250px;
+        }
+        .single-feature .feature-title {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 5px;
+        }
+        .single-feature .feature-text {
+            display: none;
+        }
+    }
+    /* --------- Styles for Screen width Smaller than 480px -------- */
+    @media only screen and (max-width: 480px) {
+        #section-feature {
+            padding-top: 140px;
+            padding-bottom: 40px;
+        }
+        .features-control {
+            float: left;
+            height: 160px;
+            width: 42px;
+            bottom: 340px;
+        }
+        .features-control .control-icon {
+            position: relative;
+            left: 2px !important;
+            float: left;
+            margin-bottom: 8px;
+        }
+    }
+}

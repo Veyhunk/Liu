@@ -26,12 +26,22 @@ $color-basic-text: $color-gray-darker;
 $color-basic-text-light: $color-gray-light;
 $color-basic-background:#f1f1f1;
 $color-basic-border:#e2e2e2;
+$color-basic-divider: #ccc;
 //color-app
-$color-app-primary-dark: #04345d;
-$color-app-primary:#0868b9;
-$color-app-primary-light: #0b90ff;
-$color-app-accent: #333339;
+$menu-height: 60px;
+$menu-color-1:#2da98c;
+$menu-color-2:#305d66;
+$color-app-primary: #1d81d1;
+$color-app-accent: #2f7f77;
+$color-app-primary-light: lighten($color-app-primary, 15%);
+$color-app-primary-lighter: lighten($color-app-primary, 45%);
+$color-app-primary-dark: darken($color-app-primary, 10%);
+$color-app-accent-light:lighten($color-app-accent, 50%);
 $color-app-primary-text: $color-gray-white;
+$color-app-secondary-text: #888;
+$color-app-background: #f8f8f8;
+$color-app-background-secondary: #e5e5e5;
+$color-app-danger-light: #FE8005;
 //dimens
 $dimens-dp:1.2rem;
 $dimens-font-size:1.1 * $dimens-dp;
@@ -41,8 +51,35 @@ $dimens-nav-top-item-height:4 * $dimens-dp;
 $dimens-nav-left-item-height:3 * $dimens-dp;
 $dimens-padding:0.5 * $dimens-dp;
 $dimens-border-width: 0.1 * $dimens-dp;
+//color-hover
+$color-hover-lightest:rgba(#fff, .2);
+$color-hover-lighter:rgba(#fff, .3);
+$color-hover-light:rgba(#fff, .5);
+$color-hover-dark:rgba(#000, .2);
+$color-hover-darker:rgba(#000, .5);
+$color-hover-darkest:rgba(#000, .7);
+// style-shadow
+// $style-shadow:0 3px 9px rgba(0, 0, 0, .2);
+$shadow-len: .6px;
+$style-shadow-nav: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .4),
+0 4*$shadow-len 25*$shadow-len 0*$shadow-len rgba(0, 0, 0, .2),
+0 8*$shadow-len 10*$shadow-len -5*$shadow-len rgba(0, 0, 0, .2);
+$shadow-len: .4px;
+$style-shadow: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .4),
+0 4*$shadow-len 25*$shadow-len 0*$shadow-len rgba(0, 0, 0, .2),
+0 8*$shadow-len 10*$shadow-len -5*$shadow-len rgba(0, 0, 0, .2);
+$shadow-len: .2px;
+$style-shadow-btn: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .2);
 
 /*funtion*/
+
+
+/*font family*/
+
+*:not([class~=fa]) {
+    font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+}
 
 @mixin Opacity($value) {
     $IEValue: $value*100;
