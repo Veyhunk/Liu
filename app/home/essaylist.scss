@@ -1,4 +1,6 @@
-// ================================================4
+/* ==================== import =======================*/
+
+@import '../shared/css/variables.scss';
 
 /* ==================== CSS Structure ==================== 
 1. COMMON STYLES
@@ -181,6 +183,11 @@ body {
         -ms-backface-visibility: hidden;
         -o-backface-visibility: hidden;
         backface-visibility: hidden;
+        &:hover {
+            z-index: 10000 !important;
+            box-shadow: $style-shadow-essay !important;
+            transition: .3s box-shadow ease-in-out !important;
+        }
     }
     .no-js .baraja-container {
         width: auto;
