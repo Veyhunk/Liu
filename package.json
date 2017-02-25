@@ -1,7 +1,7 @@
 {
     "name": "liu_design_web",
     "version": "1.0.0",
-    "description": "Liu-design-WEB",
+    "description": "liu_design_web",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
         "url": "git+https://github.com/Veyhunk/Liu.git"
     },
     "keywords": [
-        "Liu-design-WEB",
+        "liu_design_web",
         "AngularJS"
     ],
     "author": "",

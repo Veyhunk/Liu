@@ -1,13 +1,13 @@
 {
-    "name": "Liu_design_WEB",
-    "description": "Liu-design-WEB",
+    "name": "liu_design_web",
+    "description": "liu_design_web",
     "main": "index.js",
     "authors": [
         "Veyhunk <Veyhunk@qq.com>"
     ],
     "license": "MIT",
     "keywords": [
-        "Liu-design-WEB",
+        "liu_design_web",
         "AngularJS"
     ],
     "homepage": "https://github.com/Veyhunk/Liu",
