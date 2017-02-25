@@ -1,4 +1,4 @@
-## 开发说明-liu
+## 开发说明
 ### 项目结构说明
 ```javascript
 EMP.WEB
