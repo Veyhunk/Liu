@@ -39,8 +39,8 @@
         function initPagination() {
             let pagination = {
                 configs: {
-                    // 每页10条
-                    per_page: 10,
+                    // 每页8条
+                    per_page: 8,
                     // 当前页
                     page: 1,
                 },

@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "交互设计需求分析",
     "description": "需求分析的三个阶段, 需求分析应注意事项. ",
     "imageURL": "images/1.jpg",
@@ -8,7 +8,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 2,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "网页设计中的配色问题",
     "description": "网页内容与色彩的联系, 色彩传达的情感问题",
     "imageURL": "images/2.jpg",
@@ -16,7 +16,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 3,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "设计过程的头脑风暴",
     "description": "头脑风暴的方法, 头脑风暴开展的5个注意事项",
     "imageURL": "images/3.jpg",
@@ -24,7 +24,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 4,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "项目跟进中的7个建议",
     "description": "如何做好项目跟进, 项目跟进能给团队开发带来什么",
     "imageURL": "images/4.jpg",
@@ -32,7 +32,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 5,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "需求分析避免4个误区",
     "description": "需求分析过程中存在哪4个误区, 如何有效避免这4个误区",
     "imageURL": "images/5.jpg",
@@ -40,7 +40,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 6,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "设计项目管理方法",
     "description": "设计项目管理方法基本论, 管理思想如何影响设计过程",
     "imageURL": "images/6.jpg",
@@ -48,7 +48,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 7,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "设计中的排版建议",
     "description": "良好设计的版式是怎样的, 如何练就版式设计基本功",
     "imageURL": "images/7.jpg",
@@ -56,7 +56,7 @@
     "datetime": "2016-07-02 23:23:23"
 }, {
     "id": 8,
-    "author": 1,
+    "author": "Veyhunk",
     "title": "Logo创作过程",
     "description": "Giorgio12 设计工作室设计思想, Logo设计的5个步骤",
     "imageURL": "images/8.jpg",

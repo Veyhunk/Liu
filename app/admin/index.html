@@ -7,7 +7,7 @@
 <!-- 管理-->
 <section id="wrapper">
     <!-- 文章管理 -->
-    <section id="one" class="wrapper style2">
+    <section id="one" class="wrapper style2" ng-controller="EssayManage as vm">
         <div id="TeamIntroduction" class="inner">
             <div class="content">
                 <h2 class="major">文章管理</h2>
@@ -28,27 +28,25 @@
                                 </div>
                             </div>
                         </nav>
-                    </div>
-                    <div ng-controller="EssayManage">
                         <table class="table table-bordered">
-                            <tr ng-repeat="student in students|filter:titleFilter">
+                            <tr ng-repeat="essay in vm.essaysList|filter:titleFilter">
                                 <td title="'Name'">
-                                    <span ng-if="!student.$edit">{{student.Name}}</span>
-                                    <div ng-if="student.$edit"><input class="form-control" type="text" ng-model="student.Name"></div>
+                                    <span ng-if="!essay.$edit">{{essay.title}}</span>
+                                    <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.Name"></div>
                                 </td>
                                 <td title="'Id'">
-                                    <span ng-if="!student.$edit">{{student.Id}}</span>
-                                    <div ng-if="student.$edit"><input class="form-control" type="text" ng-model="student.Id"></div>
+                                    <span ng-if="!essay.$edit">{{essay.author}}</span>
+                                    <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.author"></div>
                                 </td>
                                 <td title="'Grade'">
-                                    <span ng-if="!student.$edit">{{student.Grade}}</span>
-                                    <div ng-if="student.$edit"><input class="form-control" type="text" ng-model="student.Grade"></div>
+                                    <span ng-if="!essay.$edit">{{essay.description}}</span>
+                                    <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.Grade"></div>
                                 </td>
                                 <td title="'Actions'" width="200">
-                                    <a href="" ng-if="!student.$edit" class="btn btn-default btn-xs" ng-click="student.$edit=true">Edit</a>
-                                    <a href="" ng-if="student.$edit" class="btn btn-default btn-xs" ng-click="student.$edit=false">Save</a>
-                                    <a ng-click="deleteStudent(student)" ng-if="student.$edit" class="btn btn-default btn-xs">Delete</a>
-                                    <!-- <a href="" ng-click="addStudent()" ng-if="student.$edit" class="btn btn-default btn-xs">Add</a> -->
+                                    <a href="" ng-if="!essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=true">Edit</a>
+                                    <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false">Save</a>
+                                    <a ng-click="deleteessay(essay)" ng-if="essay.$edit" class="btn btn-default btn-xs">Delete</a>
+                                    <!-- <a href="" ng-click="addessay()" ng-if="essay.$edit" class="btn btn-default btn-xs">Add</a> -->
                                 </td>
                             </tr>
                         </table>
@@ -69,7 +67,7 @@
                             <input type="text" ng-model="newName" placeholder="input Name" required/>
                             <input type="text" ng-model="newId" placeholder="input Id" required/>
                             <input type="text" ng-model="newGrade" placeholder="input Grade" required/>
-                            <input type="button" ng-click="addStudent()" value="添加" class="btn" />
+                            <input type="button" ng-click="addessay()" value="添加" class="btn" />
                         </div>
                     </div>
                 </div>
