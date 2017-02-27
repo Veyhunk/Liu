@@ -1,0 +1,46 @@
+<section class="padding" ng-controller="MemberSearchCtrl as vm">
+    <!--<div class="content-page-head">
+            <h4>会员扫描</h4>
+        <hr>
+        </div>
+
+        <hr>-->
+    <form class="form-horizontal">
+        <!-- input -->
+        <div class="form-group ">
+            <label class="col-sm-3 control-label">会员检索</label>
+            <div class="col-sm-5">
+                <input class="form-control" placeholder="请输入会员姓名，电话号码或卡号" ng-model="vm.current.search">
+            </div>
+            <!--<label class="col-sm-3 help-block">*</label>-->
+            <div class=" col-sm-4 ">
+                <button type="button" class="btn btn-primary" ng-click="vm.search(vm.current.search)"><i class="fa fa-search"></i> 查询</button>
+                <!--<button type="button" class="btn btn-default"><i class="fa fa-qrcode"></i> 扫码</button>
+                    <button type="button" class="btn btn-default"><i class="fa fa-user"></i> 散客</button>-->
+                <!--<button type="button" class="btn btn-default"><i class="fa fa-refresh"></i> 重置</button>-->
+            </div>
+        </div>
+
+        <!-- input -->
+        <div class="form-group marggin-0">
+            <label class="col-sm-3 control-label">会员信息</label>
+            <div class="col-sm-9">
+                <div class="content-page-body form-control-static">
+                    <ul class="list-inline marggin-0">
+                        <li>姓名<span class="text-info-hightlight">{{vm.current.member.name}}</span></li>
+                        <li>等级<span class="text-info-hightlight">{{vm.current.member.level}}</span></li>
+                        <li>余额<span class="text-info-hightlight">{{vm.current.member.balance}}</span></li>
+                        <li>积分<span class="text-info-hightlight">{{vm.current.member.points}}</span></li>
+                        <li ng-if="vm.current.member"><a href="" ng-click="vm.showMemberDetail = !vm.showMemberDetail">查看更多会员信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-show="vm.showMemberDetail">
+            <table class="table">
+
+            </table>
+        </div>
+    </form>
+
+</section>

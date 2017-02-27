@@ -17,6 +17,7 @@
         'app.constants',
         // 业务逻辑模块
         'app.page_template',
+        'app.member_management',
         'app.admin'
     ]);
 })();
