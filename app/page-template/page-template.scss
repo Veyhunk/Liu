@@ -1,0 +1,16 @@
+@import '../shared/css/variables.scss';
+#palette {
+    .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        tr {
+            td {
+                height: 30rem;
+            }
+        }
+    }
+    .color-td {
+        height: 100px;
+    }
+}

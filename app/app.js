@@ -17,5 +17,6 @@
         'app.shared',
         'app.constants',
         // 业务逻辑模块
+        'app.page_template'
     ]);
 })();
