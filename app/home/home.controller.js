@@ -31,9 +31,7 @@
          * @param {object} configs
          */
         function getEssays(configs) {
-            essaysModel.getEssays(configs).then(result => {
-                vm.essaysList = result;
-            });
+            vm.essaysList = essaysModel.getEssays(configs);
         }
 
         /*----------  内部辅助函数  ----------*/
@@ -49,6 +47,7 @@
         function essayView(essay) {
             if (essay) {
                 essay.id++;
+                essaysModel.updateEssays(vm.essaysList);
                 $uibModal.open({
                     templateUrl: 'app/shared/templates/essay.modal.html',
                     size: 'md',
@@ -73,14 +72,26 @@
         vm.essayView = essayView;
         init();
         vm.saveEssay = function(essay) { //添加
-            if (essay.id) {} else {
+            if (essay.id) {
+                essaysModel.updateEssays(vm.essaysList);
+            } else {
                 essay.datetime = moment().format('YYYY-MM-DD HH:mm:ss');
                 essay.id = 0;
-                vm.essaysList.push(essay);
+                let index = (vm.essaysList.length - 1) > 7 ? 7 : vm.essaysList.length - 1;
+                debugger
+                essay.imageURL = vm.essaysList[index].imageURL;
+                let list = [];
+                list.push(essay);
+                for (let key in vm.essaysList) {
+                    list.push(vm.essaysList[key]);
+                }
+                vm.essaysList = list;
+                essaysModel.updateEssays(vm.essaysList);
             }
         };
         vm.deleteEssay = function(essay) { //删除一行的内容
             vm.essaysList.splice(vm.essaysList.indexOf(essay), 1);
+            essaysModel.updateEssays(vm.essaysList);
         };
 
     }

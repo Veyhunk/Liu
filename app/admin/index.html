@@ -24,6 +24,8 @@
                         <div id="essaylist">
                             <div ng-repeat="essay in vm.essaysList|filter:titleFilter">
                                 <div id="essay" ng-click="vm.essayView(essay)">
+
+                                    <div id="image" class="image"><img src="{{essay.imageURL}}" alt="" class="feature-image" /></div>
                                     <h3 id="title">{{essay.title}}</h3>
                                     <p id="detail"><span id="datetime">{{essay.datetime}}</span>　　<span id="viewCount">{{essay.id}}</span>人浏览 </p>
                                 </div>

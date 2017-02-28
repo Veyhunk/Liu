@@ -18,13 +18,14 @@
                 </div>
                 <hr>
                 <div id="text">
+                    <div id="image" class="image"><img src="{{essay.imageURL}}" alt="" class="feature-image" /></div>
                     <span ng-if="!essay.$edit">{{essay.text}}</span>
                     <textarea name="text" id="text" cols="30" rows="10" ng-if="essay.$edit" class="form-control" type="text" ng-model="essay.text"></textarea>
                 </div>
             </div>
             <div id="option" class="pull-right" title="Actions">
                 <a href="" ng-if="!essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=true">编辑</a>
-                <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false;vm.saveEssay(essay)">保存</a>
+                <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false;vm.saveEssay(essay);essay.id||$close();">保存</a>
                 <a ng-click="vm.deleteEssay(essay);$close()" ng-if="essay.$edit&&essay.id" class="btn btn-default btn-xs">删除</a>
             </div>
         </div>

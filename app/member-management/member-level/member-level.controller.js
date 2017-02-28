@@ -37,7 +37,6 @@
         vm.openEditModal = openEditModal;
 
         function openEditModal(items) {
-            debugger
             let selected = {};
             if (selected.length > 1) {
                 $uibModal.open({

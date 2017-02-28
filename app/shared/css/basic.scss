@@ -298,6 +298,12 @@ $transition-time:.2s;
         #detail {
             margin: 0;
         }
+        #image {
+            float: right;
+            img {
+                width: 5em;
+            }
+        }
     }
 }
 
@@ -336,6 +342,14 @@ $transition-time:.2s;
             hr {
                 margin-top: 0.5em;
                 margin-bottom: 0.5em;
+            }
+            #image {
+                width: 100%;
+                text-align: center;
+                padding-left: 30%;
+                img {
+                    width: 60%;
+                }
             }
         }
         #option {
