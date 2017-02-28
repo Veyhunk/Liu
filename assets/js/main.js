@@ -19,7 +19,7 @@
     $(function() {
         //如何使页面链接跳转是平滑过渡 而不是直接跳转？
         var $root = $('html, body');
-        $('a').click(function() {
+        $(".scroll a, .navbar-brand, .gototop").click(function() {
             $root.animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 600, 'swing');
