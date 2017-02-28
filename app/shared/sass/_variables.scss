@@ -23,7 +23,7 @@ $color-transparent-lighter:rgba(255, 255, 255, 0.2);
 $color-transparent-lightest:rgba(255, 255, 255, 0.3);
 //color-basic
 $color-basic-bg-component: $color-gray-white;
-$color-basic-text: $color-gray-darker;
+$color-basic-text: #2b2b2b;
 $color-basic-text-light: $color-gray-light;
 $color-basic-background:#f1f1f1;
 $color-basic-border:#e2e2e2;
@@ -32,7 +32,7 @@ $color-basic-divider: #ccc;
 $menu-height: 60px;
 $menu-color-1:#2da98c;
 $menu-color-2:#305d66;
-$color-app-primary: #1d81d1;
+$color-app-primary: #77019D;
 $color-app-accent: #2f7f77;
 $color-app-primary-light: lighten($color-app-primary, 15%);
 $color-app-primary-lighter: lighten($color-app-primary, 45%);

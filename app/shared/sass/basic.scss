@@ -286,6 +286,17 @@ $transition-time:.2s;
 #essaylist {
     border-bottom: 1px solid $color-basic-divider;
     #essay {
+        // font color
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        strong {
+            color: white;
+        }
         text-align: left;
         padding: 0.5em 1em 0.5em 1em;
         border-bottom: 1px solid $color-basic-divider;
@@ -317,6 +328,7 @@ $transition-time:.2s;
         font-size: 2em;
         box-shadow: none;
         margin: -0.3em -0.2em 0 0;
+        color: $color-basic-text !important;
         &:hover {
             color: red !important;
             background: transparent;
@@ -327,6 +339,17 @@ $transition-time:.2s;
         }
     }
     #essay-model {
+        // font color
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        strong {
+            color: $color-basic-text;
+        }
         #essay {
             text-align: left;
             padding: 0.5em 1em 0.5em 1em;

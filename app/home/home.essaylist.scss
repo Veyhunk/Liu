@@ -26,6 +26,17 @@ body {
 }
 
 #section-feature {
+    // font color
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+        color: $color-basic-text;
+    }
     img {
         max-width: 100%;
         height: auto;
@@ -105,6 +116,13 @@ body {
         -o-box-sizing: border-box;
         box-sizing: border-box;
     }
+    .single-feature {
+        .fancy-button {
+            &:hover {
+                color: $color-basic-text !important;
+            }
+        }
+    }
     /* --------------- Common Classes --------------- */
     .fixed {
         position: fixed;
@@ -125,6 +143,11 @@ body {
         border: 1px solid;
         margin: 10px;
         overflow: visible;
+        &:hover {
+            background: $color-hover-light;
+            // border: 0 solid transparent;
+            color: white !important;
+        }
     }
     /* ================ Features Section ================ */
     .container {

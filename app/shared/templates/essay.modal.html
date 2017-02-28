@@ -6,13 +6,15 @@
                 <h3 id="title" ng-if="!essay.$edit">{{essay.title}}</h3>
                 <span ng-if="essay.$edit">标题：</span>
                 <input id="title" ng-if="essay.$edit" class="form-control" type="text" ng-model="essay.title">
-                <div id="info">
+                <div id="info-main">
                     <span>作者：</span>
                     <span ng-if="!essay.$edit">{{essay.author}}</span>
                     <input ng-if="essay.$edit" class="form-control" type="text" ng-model="essay.author">
                     <br ng-if="!essay.$edit"><span>简介：</span>
                     <span ng-if="!essay.$edit">{{essay.description}}</span>
                     <input ng-if="essay.$edit" class="form-control" type="text" ng-model="essay.description">
+                </div>
+                <div id="info">
                     <br ng-if="!essay.$edit">
                     <span id="datetime" ng-if="!essay.$edit">{{essay.datetime}}</span>　　<span id="viewCount" ng-if="!essay.$edit">{{essay.id}}人浏览</span>
                 </div>
