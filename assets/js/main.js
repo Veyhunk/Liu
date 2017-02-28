@@ -171,6 +171,105 @@
 
             });
 
+        // Menu.
+        var $mynav = $('#mynav');
+
+        $mynav._locked = false;
+
+        $mynav._lock = function() {
+
+            if ($mynav._locked)
+                return false;
+
+            $mynav._locked = true;
+
+            window.setTimeout(function() {
+                $mynav._locked = false;
+            }, 350);
+
+            return true;
+
+        };
+
+        $mynav._show = function() {
+
+            if ($mynav._lock())
+                $body.addClass('is-mynav-visible');
+
+        };
+
+        $mynav._hide = function() {
+
+            if ($mynav._lock())
+                $body.removeClass('is-menu-visible');
+
+        };
+
+        $mynav._toggle = function() {
+
+            if ($mynav._lock())
+                $body.toggleClass('is-mynav-visible');
+
+        };
+
+        $mynav
+            .appendTo($body)
+            .on('click', function(event) {
+
+                event.stopPropagation();
+
+                // Hide.
+                $mynav._hide();
+
+            })
+            .find('.inner')
+            .on('click', '.close', function(event) {
+
+                event.preventDefault();
+                event.stopPropagation();
+                event.stopImmediatePropagation();
+
+                // Hide.
+                $mynav._hide();
+
+            })
+            .on('click', function(event) {
+                event.stopPropagation();
+            })
+            .on('click', 'a', function(event) {
+
+                var href = $(this).attr('href');
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                // Hide.
+                $mynav._hide();
+
+                // Redirect.
+                window.setTimeout(function() {
+                    window.location.href = href;
+                }, 350);
+
+            });
+
+        $body
+            .on('click', 'a[href="#mynav"]', function(event) {
+
+                event.stopPropagation();
+                event.preventDefault();
+
+                // Toggle.
+                $mynav._toggle();
+
+            })
+            .on('keydown', function(event) {
+
+                // Hide on escape.
+                if (event.keyCode == 27)
+                    $mynav._hide();
+
+            });
     });
 
 })(jQuery);
