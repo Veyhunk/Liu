@@ -281,20 +281,65 @@ $transition-time:.2s;
             margin: 0;
         }
     }
-    #essaylist {
+}
+
+#essaylist {
+    border-bottom: 1px solid $color-basic-divider;
+    #essay {
+        text-align: left;
+        padding: 0.5em 1em 0.5em 1em;
         border-bottom: 1px solid $color-basic-divider;
+        &:hover {
+            background-color: $color-transparent-primary;
+        }
+        #title {
+            margin-bottom: 0.5em;
+        }
+        #detail {
+            margin: 0;
+        }
+    }
+}
+
+.modal {
+    *:not([class~=fa]) {
+        font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+    }
+    button {
+        height: 1em;
+        font-size: 2em;
+        box-shadow: none;
+        margin: -0.3em -0.2em 0 0;
+        &:hover {
+            color: red !important;
+            background: transparent;
+        }
+        p {
+            box-shadow: none;
+            margin: 0;
+        }
+    }
+    #essay-model {
         #essay {
-            padding: 1em 1em 0 1em;
-            border-bottom: 1px solid $color-basic-divider;
-            &:hover {
-                background-color: $color-transparent-primary;
-            }
+            text-align: left;
+            padding: 0.5em 1em 0.5em 1em;
             #title {
-                margin: 0;
+                font-size: 1.6em;
+                margin-bottom: 0.5em;
             }
-            #detail {
+            #info {
+                font-size: 0.9em;
                 margin: 0;
+                color: $color-gray-light;
             }
+            hr {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
+        }
+        #option {
+            margin-right: 1em;
         }
     }
 }

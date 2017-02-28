@@ -15,7 +15,7 @@
                     <div class="content-page-body">
                         <nav class="navbar navbar-toolbar navbar-default">
                             <ul class="nav navbar-nav navbar-left">
-                                <li><a class="btn-clear"><i class="fa fa-plus"></i> 添加</a></li>
+                                <li><a class="btn-clear" ng-click="vm.essayView()"><i class="fa fa-plus"></i> 添加</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right  padding-0">
                                 <li><input type="text" class="input-clear" ng-model="titleFilter" placeholder="搜索"></li>
@@ -45,7 +45,7 @@
                                 </td>
                                 <td title="'Actions'" width="200">
                                     <a href="" ng-if="!essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=true">Edit</a>
-                                    <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false">Save</a>
+                                    <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false;saveEssay(essay)">Save</a>
                                     <a ng-click="deleteessay(essay)" ng-if="essay.$edit" class="btn btn-default btn-xs">Delete</a>
                                     <!-- <a href="" ng-click="addessay()" ng-if="essay.$edit" class="btn btn-default btn-xs">Add</a> -->
                                 </td>
@@ -68,7 +68,7 @@
                             <input type="text" ng-model="newName" placeholder="input Name" required/>
                             <input type="text" ng-model="newId" placeholder="input Id" required/>
                             <input type="text" ng-model="newGrade" placeholder="input Grade" required/>
-                            <input type="button" ng-click="addessay()" value="添加" class="btn" />
+                            <input type="button" ng-click="addessay(essay)" value="添加" class="btn" />
                         </div>
                     </div>
                 </div>

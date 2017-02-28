@@ -42,7 +42,7 @@
                 <section class="features"> </section>
                 <ul class="actions">
                     <!--XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
-                    <li><a href="#" class="button">了解更多</a></li>
+                    <li><a href="" class="button">了解更多</a></li>
                 </ul>
             </div>
         </section>
@@ -53,7 +53,7 @@
                 <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
                 <div class="content">
                     <h2 class="major">Giorgio Sindes（首席设计师，Giorgio12创始人）</h2>
-                    <p>中国福建省著名高校<a href="https://www.fjnu.edu.cn/" target="blank"><strong>福建师范大学</strong></a>信息技术学院学生，拥有多年的设计行业经验， 为国内外著名企业如XXX、XXXX等执行设计创作 </p> <a href="#" class="special">了解更多</a> </div>
+                    <p>中国福建省著名高校<a href="https://www.fjnu.edu.cn/" target="blank"><strong>福建师范大学</strong></a>信息技术学院学生，拥有多年的设计行业经验， 为国内外著名企业如XXX、XXXX等执行设计创作 </p> <a href="" class="special">了解更多</a> </div>
             </div>
         </section>
         <!-- 团队成员个人展示二 -->
@@ -63,7 +63,7 @@
                 <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
                 <div class="content">
                     <h2 class="major">Chen Lin（首席设计师，Giorgio12联合创始人）</h2>
-                    <p>欧洲著名设计院校<a href="http://www.ghpa.ru/" target="blank"><strong>俄罗斯圣彼得堡国立工业艺术大学</a></strong>艺术学硕士<br>在学期间曾经获得多项国内设计大赛奖项，拥有多年的设计行业经验</p> <a href="#" class="special">了解更多</a> </div>
+                    <p>欧洲著名设计院校<a href="http://www.ghpa.ru/" target="blank"><strong>俄罗斯圣彼得堡国立工业艺术大学</a></strong>艺术学硕士<br>在学期间曾经获得多项国内设计大赛奖项，拥有多年的设计行业经验</p> <a href="" class="special">了解更多</a> </div>
             </div>
         </section>
         <!-- 团队成员个人展示三 -->
@@ -73,7 +73,7 @@
                 <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
                 <div class="content">
                     <h2 class="major">Nancy Chou（设计组长）</h2>
-                    <p>中国著名艺术院校<a href="http://www.cucn.edu.cn/" target="blank"><strong>中国传媒大学南广学院</strong></a>传播学硕士<br>在学期间曾经获得多项国内多媒体传播艺术大赛奖项，拥有多年的设计行业经验 </p> <a href="#" class="special">了解更多</a> </div>
+                    <p>中国著名艺术院校<a href="http://www.cucn.edu.cn/" target="blank"><strong>中国传媒大学南广学院</strong></a>传播学硕士<br>在学期间曾经获得多项国内多媒体传播艺术大赛奖项，拥有多年的设计行业经验 </p> <a href="" class="special">了解更多</a> </div>
             </div>
         </section>
         <!-- 文章 -->
@@ -98,59 +98,59 @@
                                     <!--Features container Starts -->
                                     <ul id="card-ul" class="features-hold baraja-container">
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[0].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[0])" class="single-feature"> <img src="{{vm.essaysList[0].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[0].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[0].description}}</p> <a href="#" class="fancy-button button-line btn-col small vertical">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[0].description}}</p> <a href="" class="fancy-button button-line btn-col small vertical" ng-click="vm.essayView(vm.essaysList[0])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章二-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[1].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[1])" class="single-feature"> <img src="{{vm.essaysList[1].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[1].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[1].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[1].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[1])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章三-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[2].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[2])" class="single-feature"> <img src="{{vm.essaysList[2].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[2].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[2].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[2].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[2])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章四-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[3].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[3])" class="single-feature"> <img src="{{vm.essaysList[3].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[3].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[3].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[3].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[3])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章五-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[4].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[4])" class="single-feature"> <img src="{{vm.essaysList[4].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[4].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[4].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[4].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[4])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章六-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[5].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[5])" class="single-feature"> <img src="{{vm.essaysList[5].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[5].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[5].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[5].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[5])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章七-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[6].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[6])" class="single-feature"> <img src="{{vm.essaysList[6].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[6].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[6].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[6].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[6])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                         <!--文章八-->
                                         <!-- Single Feature Starts -->
-                                        <li class="single-feature"> <img src="{{vm.essaysList[7].imageURL}}" alt="" class="feature-image" />
+                                        <li ng-click="vm.essayView(vm.essaysList[7])" class="single-feature"> <img src="{{vm.essaysList[7].imageURL}}" alt="" class="feature-image" />
                                             <!-- Feature Icon -->
                                             <h4 class="feature-title color-scheme"><strong>{{vm.essaysList[7].title}}</strong></h4>
-                                            <p class="feature-text">{{vm.essaysList[7].description}}</p> <a href="#" class="fancy-button button-line btn-col small zoom">查看详情</a> </li>
+                                            <p class="feature-text">{{vm.essaysList[7].description}}</p> <a href="" class="fancy-button button-line btn-col small zoom" ng-click="vm.essayView(vm.essaysList[7])">查看详情</a> </li>
                                         <!-- Single Feature Ends -->
                                     </ul>
                                     <!--Features container Ends -->

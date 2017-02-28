@@ -44,35 +44,39 @@
             getEssays(vm.pagination.configs);
         }
 
-        function essayView(object) {
-            let selected = object;
-            if (selected) {
+        function essayView(essay) {
+            if (essay) {
+                essay.id++;
                 $uibModal.open({
                     templateUrl: 'app/shared/templates/essay.modal.html',
-                    size: 'sm',
+                    size: 'md',
                     controller: function($scope) {
-                        $scope.essay = object;
+                        $scope.essay = essay;
                         $scope.vm = vm;
                     }
                 });
                 return;
+            } else {
+                $uibModal.open({
+                    templateUrl: 'app/shared/templates/essay.modal.html',
+                    size: 'md',
+                    controller: function($scope) {
+                        $scope.essay = {};
+                        $scope.essay.$edit = true;
+                        $scope.vm = vm;
+                    }
+                });
             }
-            $uibModal.open({
-                templateUrl: 'app/shared/templates/essay.modal.html',
-                size: 'lg',
-                controller: function($scope) {
-                    $scope.essay = {};
-                    $scope.vm = vm;
-                }
-            });
         }
         vm.essayView = essayView;
         init();
-        vm.addEssay = function() { //添加
-            vm.essaysList.push({ Name: vm.newName, Id: vm.newId, Grade: vm.newGrade });
-            vm.newName = '';
-            vm.newId = '';
-            vm.newGrade = '';
+        vm.saveEssay = function(essay) { //添加
+            debugger
+            if (essay.id) {} else {
+                essay.datetime = moment().format('YYYY-MM-DD HH:mm:ss');
+                essay.id = 0;
+                vm.essaysList.push(essay);
+            }
         };
         vm.deleteEssay = function(essay) { //删除一行的内容
             vm.essaysList.splice(vm.essaysList.indexOf(essay), 1);
