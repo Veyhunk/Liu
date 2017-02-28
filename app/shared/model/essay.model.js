@@ -61,7 +61,7 @@
             }
 
         }
-        // 获取文章列表
+        //更新文章列表
         function updateEssays(essays) {
             // 保存 essays
             return localStorageService.set("essays", essays);

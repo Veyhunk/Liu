@@ -1,4 +1,4 @@
-@import '../shared/css/variables.scss';
+@import '../shared/sass/variables.scss';
 
 /*works*/
 
@@ -169,7 +169,7 @@
     overflow: hidden;
     margin: 0;
     /*change here for spacing*/
-    width: 33%;
+    width: 33.3333333%;
     text-align: center;
     cursor: pointer;
 }

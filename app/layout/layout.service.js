@@ -16,45 +16,7 @@
         /**
          * @typedef {Object} Menus
          * @property {Array.<Object>} Menus.mainMenus - 主菜单
-         * ```
-         *   [{
-         *       id: 1,
-         *       name: '会员管理',
-         *       url: '#/member_management',
-         *       parent: null,
-         *       sort: 1,
-         *       children: 
-         *       [{
-         *           id: 2,
-         *           name: '会员登记',
-         *           url: '#/member_management/register',
-         *           parent: 1,
-         *           sort: 1,
-         *          }, {
-         *           id: 3,
-         *           name: '会员列表',
-         *           url: '#/member_management/list',
-         *           parent: 1,
-         *           sort: 2,
-         *       }]
-         *   }]
-         * ```
          * @property {Array.<Object>} Menus.shortMenus - 快捷菜单.
-         * ``` 
-         * [{
-         *           id: 2,
-         *           name: '会员登记',
-         *           url: '#/member_management/register',
-         *           parent: 1,
-         *           sort: 2,  // parent sort + child sort
-         *          }, {
-         *           id: 3,
-         *           name: '会员列表',
-         *           url: '#/member_management/list',
-         *           parent: 1,
-         *           sort: 3,
-         *       }]
-         * ```
          */
 
         /**
