@@ -1,0 +1,43 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="$close()" aria-label="Close"><p aria-hidden="true">&times;</p></button>
+    <h4 class="modal-title">编辑文章</h4>
+</div>
+<div class="modal-body">
+    <form novalidate name="essayModelForm">
+        <table class="">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td title="Name">
+                        <p ng-if="!essay.$edit">{{essay.title}}</p>
+                        <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.title"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td title="Id">
+                        <p ng-if="!essay.$edit">{{essay.author}}</p>
+                        <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.author"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td title="Grade">
+                        <p ng-if="!essay.$edit">{{essay.description}}</p>
+                        <div ng-if="essay.$edit"><input class="form-control" type="text" ng-model="essay.description"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td title="Actions" width="200">
+                        <a href="" ng-if="!essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=true">Edit</a>
+                        <a href="" ng-if="essay.$edit" class="btn btn-default btn-xs" ng-click="essay.$edit=false">Save</a>
+                        <a ng-click="deleteessay(essay)" ng-if="essay.$edit" class="btn btn-default btn-xs">Delete</a>
+                        <!-- <a href="" ng-click="addessay()" ng-if="essay.$edit" class="btn btn-default btn-xs">Add</a> -->
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </form>
+</div>

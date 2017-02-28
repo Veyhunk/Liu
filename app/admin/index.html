@@ -14,18 +14,22 @@
                 <div class="content-page-body">
                     <div class="content-page-body">
                         <nav class="navbar navbar-toolbar navbar-default">
-                            <div class="container-fluid padding-0">
-                                <div class="collapse navbar-collapse bs-example-toolbar-collapse-1  padding-0">
-                                    <ul class="nav navbar-nav navbar-left">
-                                        <li><a href=""><i class="fa fa-plus"></i> 添加</a></li>
-                                    </ul>
-                                    <ul class="nav navbar-nav navbar-right  padding-0">
-                                        <li><input type="text" style="border-radius: 0; height: 100%;background: #f2f2f2;border-width: 0;padding: 9px 15px;line-height: 18px;height: 36px;" ng-model="titleFilter" placeholder="搜索"></li>
-                                    </ul>
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a class="btn-clear"><i class="fa fa-plus"></i> 添加</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right  padding-0">
+                                <li><input type="text" class="input-clear" ng-model="titleFilter" placeholder="搜索"></li>
+                            </ul>
+                        </nav>
+                        <div id="essaylist">
+                            <div ng-repeat="essay in vm.essaysList|filter:titleFilter">
+                                <div id="essay" ng-click="vm.essayView(essay)">
+                                    <h3 id="title">{{essay.title}}</h3>
+                                    <p id="detail"><span id="datetime">{{essay.datetime}}</span>　　<span id="viewCount">{{essay.id}}</span>人浏览 </p>
                                 </div>
                             </div>
-                        </nav>
-                        <table class="table table-bordered">
+                        </div>
+                        <table class="table table-bordered" ng-if="false">
                             <tr ng-repeat="essay in vm.essaysList|filter:titleFilter">
                                 <td title="'Name'">
                                     <span ng-if="!essay.$edit">{{essay.title}}</span>

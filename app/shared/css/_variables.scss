@@ -11,6 +11,7 @@ $color-gray-dark: lighten(#000, 20%); // #333
 $color-gray: lighten(#000, 33.5%); // #555
 $color-gray-light: lighten(#000, 46.7%); // #777
 $color-gray-lighter: lighten(#000, 93.5%); // #eee
+$color-gray-lightest: lighten(#000, 95%); // #f2f2f2
 $color-gray-white: lighten(#000, 100%); // #fff
 //color-transparent
 $color-transparent-darkest:rgba(0, 0, 0, 0.3);
@@ -42,6 +43,7 @@ $color-app-secondary-text: #888;
 $color-app-background: #f8f8f8;
 $color-app-background-secondary: #e5e5e5;
 $color-app-danger-light: #FE8005;
+$color-transparent-primary:rgba($color-app-primary, 0.1);
 //dimens
 $dimens-dp:1.2rem;
 $dimens-font-size:1.1 * $dimens-dp;
@@ -80,14 +82,6 @@ $style-shadow-essay: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 
 // }
 
 /*funtion*/
-
-
-/*font family*/
-
-*:not([class~=fa]) {
-    font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
-    -webkit-font-smoothing: antialiased;
-}
 
 @mixin Opacity($value) {
     $IEValue: $value*100;

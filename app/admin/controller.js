@@ -5,25 +5,9 @@
         .module('app.admin')
         .controller('EssayManage', EssayManage);
 
-    EssayManage.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService'];
+    EssayManage.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService', '$uibModal'];
 
-    function EssayManage($scope, $sce, EssaysModel, UtilityService) {
-        $scope.students = [
-            { Name: '小李', Id: '201401201', Grade: '计算机技术' },
-            { Name: '李磊', Id: '201401202', Grade: '计算机技术' },
-            { Name: '夏津', Id: '201401203', Grade: '计算机技术' },
-            { Name: '杭州', Id: '201401204', Grade: '计算机技术' }
-        ];
-        $scope.addStudent = function() { //添加学生函数
-            $scope.students.push({ Name: $scope.newName, Id: $scope.newId, Grade: $scope.newGrade });
-            $scope.newName = '';
-            $scope.newId = '';
-            $scope.newGrade = '';
-        };
-        $scope.deleteStudent = function(student) { //删除一行的内容
-            $scope.students.splice($scope.students.indexOf(student), 1);
-        };
-
+    function EssayManage($scope, $sce, EssaysModel, UtilityService, $uibModal) {
 
         let vm = this;
         /*----------  界面层资源  ----------*/
@@ -60,6 +44,29 @@
             getEssays(vm.pagination.configs);
         }
 
+        function essayView(object) {
+            let selected = object;
+            if (selected) {
+                $uibModal.open({
+                    templateUrl: 'app/shared/templates/essay.modal.html',
+                    size: 'sm',
+                    controller: function($scope) {
+                        $scope.essay = object;
+                        $scope.vm = vm;
+                    }
+                });
+                return;
+            }
+            $uibModal.open({
+                templateUrl: 'app/shared/templates/essay.modal.html',
+                size: 'lg',
+                controller: function($scope) {
+                    $scope.essay = {};
+                    $scope.vm = vm;
+                }
+            });
+        }
+        vm.essayView = essayView;
         init();
         vm.addEssay = function() { //添加
             vm.essaysList.push({ Name: vm.newName, Id: vm.newId, Grade: vm.newGrade });
