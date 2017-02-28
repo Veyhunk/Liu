@@ -146,7 +146,7 @@ body {
         &:hover {
             background: $color-hover-light;
             // border: 0 solid transparent;
-            color: white !important;
+            color: $color-app-primary-text !important;
         }
     }
     /* ================ Features Section ================ */
@@ -179,10 +179,10 @@ body {
         margin-bottom: 16px;
     }
     .baraja-container .single-feature:hover {
-        -webkit-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
-        -moz-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
-        -o-box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
-        box-shadow: 0px 0px 10px rgba(110, 110, 110, 0.5);
+        -webkit-box-shadow: 0px 0px 10px rgba($color-app-primary-text, 0.5);
+        -moz-box-shadow: 0px 0px 10px rgba($color-app-primary-text, 0.5);
+        -o-box-shadow: 0px 0px 10px rgba($color-app-primary-text, 0.5);
+        box-shadow: 0px 0px 10px rgba($color-app-primary-text, 0.5);
     }
     .baraja-container {
         margin: 0 auto 30px;

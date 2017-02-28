@@ -73,9 +73,10 @@ $style-shadow: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .4)
 $shadow-len: .2px;
 $style-shadow-btn: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .2);
 $shadow-len: .8px;
-$style-shadow-essay: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba(0, 0, 0, .4),
-0 4*$shadow-len 25*$shadow-len 0*$shadow-len rgba(0, 0, 0, .2),
-0 8*$shadow-len 10*$shadow-len -5*$shadow-len rgba(0, 0, 0, .2);
+$shadow-transparent: .5;
+$style-shadow-essay: 0 16*$shadow-len 26*$shadow-len -10*$shadow-len rgba($color-app-primary, 2*$shadow-transparent),
+0 4*$shadow-len 25*$shadow-len 0*$shadow-len rgba($color-app-primary, 1*$shadow-transparent),
+0 8*$shadow-len 10*$shadow-len -5*$shadow-len rgba($color-app-primary, 1*$shadow-transparent);
 //transition
 // *:hover {
 //     transition: .2s box-shadow ease-in-out;

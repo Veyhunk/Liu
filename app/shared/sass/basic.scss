@@ -295,7 +295,7 @@ $transition-time:.2s;
         h5,
         h6,
         strong {
-            color: white;
+            color: $color-app-primary-text;
         }
         text-align: left;
         padding: 0.5em 1em 0.5em 1em;
