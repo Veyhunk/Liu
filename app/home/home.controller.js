@@ -63,7 +63,7 @@
                     //    浏览量+1
                     essay.id++;
                     // 关闭编辑状态
-                    $scope.essay.$edit = false;
+                    essay.$edit = false;
                     //    浏览量同步到服务器
                     essaysModel.updateEssays(vm.essaysList);
                     $uibModal.open({
