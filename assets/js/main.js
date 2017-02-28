@@ -18,19 +18,17 @@
 
     $(function() {
         //如何使页面链接跳转是平滑过渡 而不是直接跳转？
-
-        /**		var $root = $('html, body');
-        			$('a').click(function() {
-           			$root.animate({
-               		scrollTop: $( $.attr(this, 'href') ).offset().top
-           			 }, 500);
-           			 return false;
-        			});
-        */
-
+        var $root = $('html, body');
+        $('a').click(function() {
+            $root.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 600, 'swing');
+            return false;
+        });
         var $window = $(window),
             $body = $('body'),
             $header = $('#header'),
+            $DesignBusiness = $('#DesignBusiness'),
             $banner = $('#banner');
 
         // Disable animations/transitions until the page has loaded.
@@ -57,13 +55,13 @@
         if (skel.vars.IEVersion < 8)
             $header.removeClass('alt');
 
-        if ($banner.length > 0 &&
+        if ($DesignBusiness.length > 0 &&
             $header.hasClass('alt')) {
 
             $window.on('resize', function() { $window.trigger('scroll'); });
 
-            $banner.scrollex({
-                bottom: $header.outerHeight() + 110,
+            $DesignBusiness.scrollex({
+                bottom: $header.outerHeight() + 10,
                 terminate: function() { $header.removeClass('alt'); },
                 enter: function() { $header.addClass('alt'); },
                 leave: function() { $header.removeClass('alt'); }
@@ -171,105 +169,6 @@
 
             });
 
-        // Menu.
-        var $mynav = $('#mynav');
-
-        $mynav._locked = false;
-
-        $mynav._lock = function() {
-
-            if ($mynav._locked)
-                return false;
-
-            $mynav._locked = true;
-
-            window.setTimeout(function() {
-                $mynav._locked = false;
-            }, 350);
-
-            return true;
-
-        };
-
-        $mynav._show = function() {
-
-            if ($mynav._lock())
-                $body.addClass('is-mynav-visible');
-
-        };
-
-        $mynav._hide = function() {
-
-            if ($mynav._lock())
-                $body.removeClass('is-menu-visible');
-
-        };
-
-        $mynav._toggle = function() {
-
-            if ($mynav._lock())
-                $body.toggleClass('is-mynav-visible');
-
-        };
-
-        $mynav
-            .appendTo($body)
-            .on('click', function(event) {
-
-                event.stopPropagation();
-
-                // Hide.
-                $mynav._hide();
-
-            })
-            .find('.inner')
-            .on('click', '.close', function(event) {
-
-                event.preventDefault();
-                event.stopPropagation();
-                event.stopImmediatePropagation();
-
-                // Hide.
-                $mynav._hide();
-
-            })
-            .on('click', function(event) {
-                event.stopPropagation();
-            })
-            .on('click', 'a', function(event) {
-
-                var href = $(this).attr('href');
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                // Hide.
-                $mynav._hide();
-
-                // Redirect.
-                window.setTimeout(function() {
-                    window.location.href = href;
-                }, 350);
-
-            });
-
-        $body
-            .on('click', 'a[href="#mynav"]', function(event) {
-
-                event.stopPropagation();
-                event.preventDefault();
-
-                // Toggle.
-                $mynav._toggle();
-
-            })
-            .on('keydown', function(event) {
-
-                // Hide on escape.
-                if (event.keyCode == 27)
-                    $mynav._hide();
-
-            });
     });
 
 })(jQuery);

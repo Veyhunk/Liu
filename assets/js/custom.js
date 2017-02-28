@@ -6,7 +6,6 @@ $(document).ready(function() {
     var $el = $('#card-ul'),
         sectionFeature = $('#section-feature'),
         baraja = $el.baraja();
-
     if ($(window).width() > 480) {
         sectionFeature.appear(function() {
             baraja.fan({

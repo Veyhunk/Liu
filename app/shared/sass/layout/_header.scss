@@ -31,17 +31,35 @@
             }
         }
     }
-    nav {
-        font-family: _font(family-heading);
-        font-size: 0.8em;
-        font-weight: _font(weight-heading-bold);
+    .navbar-collapse {
+        // font-family: _font(family-heading);
+        font-size: 1em;
+        // font-weight: _font(weight-heading-bold);
         height: 3em;
         letter-spacing: _font(kern-heading);
         line-height: 3em;
         position: absolute;
         right: 0.7em;
         text-transform: uppercase;
-        top: 0.7em;
+        top: 0.2em;
+        li {
+            float: left;
+            &:hover,
+            &:focus {
+                color: _palette(accent);
+                background-color: transparent !important;
+            }
+            &:active {
+                color: _palette(accent);
+                background-color: transparent !important;
+            }
+        }
+        .nav>li>a:focus,
+        .nav>li>a:hover {
+            text-decoration: none;
+            color: lighten(_palette(accent), 15) !important;
+            background-color: transparent !important;
+        }
         a {
             border: 0;
             display: inline-block;
@@ -60,10 +78,12 @@
                     content: '\f0c9';
                 }
                 &:hover {
-                    background-color: _palette(border-bg);
+                    color: _palette(accent);
+                    background-color: transparent;
                 }
                 &:active {
-                    background-color: _palette(border2-bg);
+                    color: _palette(accent);
+                    background-color: transparent;
                 }
             }
         }
@@ -83,7 +103,7 @@
                 height: 4.5em !important;
             }
         }
-        nav {
+        .navbar-collapse {
             top: 0;
             right: 0;
             height: inherit;
@@ -113,7 +133,10 @@
                 height: 2.5em;
             }
         }
-        nav {
+        .navbar-collapse {
+            display: none;
+        }
+        .navbar-collapse {
             a {
                 &[href="#menu"] {
                     width: 4em;
