@@ -20,7 +20,7 @@
                 </div>
                 <hr>
                 <div id="text">
-                    <div id="image" class="image"><img src="{{essay.imageURL}}" alt="" class="feature-image" /></div>
+                    <div id="image" class="image"><img ng-src="{{essay.imageURL}}" alt="" class="feature-image" /></div>
                     <span ng-if="!essay.$edit">{{essay.text}}</span>
                     <textarea name="text" id="text" cols="30" rows="10" ng-if="essay.$edit" class="form-control" type="text" ng-model="essay.text"></textarea>
                 </div>
