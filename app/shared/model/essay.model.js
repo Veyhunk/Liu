@@ -17,6 +17,7 @@
             getEssays: getEssays,
             editEssay: editEssay,
             updateEssays: updateEssays,
+            resetEssays: resetEssays,
             getClasses: getClasses
         };
 
@@ -59,6 +60,11 @@
                     }
                 );
             }
+
+        }
+        // 获取文章列表
+        function resetEssays(configs = {}) {
+            return essays.getList(configs);
 
         }
         //更新文章列表

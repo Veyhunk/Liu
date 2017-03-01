@@ -152,8 +152,9 @@ $transition-time:.2s;
     }
     .input-clear {
         border-radius: 0;
-        background: $color-gray-lightest;
+        background: $color-gray-light;
         border-width: 0;
+        min-width: 15em;
     }
     //component-image
     .image-group {

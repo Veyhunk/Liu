@@ -5,9 +5,9 @@
         .module('app.admin')
         .controller('EssayManage', EssayManage);
 
-    EssayManage.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService', '$uibModal'];
+    EssayManage.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService', '$uibModal', 'localStorageService'];
 
-    function EssayManage($scope, $sce, EssaysModel, UtilityService, $uibModal) {
+    function EssayManage($scope, $sce, EssaysModel, UtilityService, $uibModal, localStorageService) {
 
         let vm = this;
         /*----------  界面层资源  ----------*/
@@ -33,6 +33,22 @@
         function getEssays(configs) {
             // 通过页面配置 从模型层获取数据
             vm.essaysList = essaysModel.getEssays(configs);
+        }
+
+        /**
+         * 根据参数，获取文章列表
+         * 
+         * @param {object} configs 配置
+         */
+        vm.resetEssays = function() {
+            // 通过页面配置 从模型层获取数据
+            essaysModel.resetEssays(vm.pagination.configs).then(
+                res => {
+                    let result = res.plain();
+                    localStorageService.set("essays", result);
+                    vm.essaysList = result;
+                }
+            );
         }
 
         /*----------  内部辅助函数  ----------*/
