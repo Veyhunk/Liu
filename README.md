@@ -1,18 +1,12 @@
 ## 开发说明
 ### 项目结构说明
 ```javascript
-EMP.WEB
+Giorgio.WEB
  |-app                        // WEB前端模块源码
     |-_common                 // 全局共享目录
-      |- forms                 // SmartAdmin form 指令内容
-      |- layout                // 全局共享布局指令
-      |- ui                    // SmartAdmin ui 指令目录
-      |- module.js             // 全局共享路由配置 
-    |-xxxxxxxxx                // 各业务逻辑模块
-    |-prepayment-management    // 预付费子系统，暂无使用
-    |-billing-system           // 智能计费管理子系统
-    |-xxxxxxxxx                // 各业务逻辑模块
-    |-ui                       // ui示例模块
+      |- module.js            // 全局共享路由配置 
+    |-home                    // 首页模块
+    |-admin                   // 项目后台管理模块
     |-app.js                  // angular顶层入口，在其它模块定义的Module要在这里注入
     |-main.js                 // 手动bootstrap（运行）项目
     |-layout                  // 全局布局模块
@@ -21,21 +15,24 @@ EMP.WEB
  |-node_modules               // npm依赖包
  |-build                      // 部署打包生成文件
  |-tests                      // 测试
- |-404.html
+ |-404.html                   // 404
  |-app.config.js              // 配置文件
  |-app.scripts.json           // 依赖插件配置
- |-bower.json                 
- |-package.json                 
- |-gulpfile.js                
- |-README.md                               
- |-index.html 
+ |-bower.json                 // bower配置 
+ |-package.json               // package配置                 
+ |-gulpfile.js                // gulp配置               
+ |-README.md                  // 项目说明                              
+ |-index.html                 // 项目主页   
+
 ```
 整体项目结构大致如上，第一个模块下都有一个module.js文件进行路由配置。
 注：项目结构以当前实际目录结构为准，以上只供参考。
 ### 拉取项目
 首先运行如下命令，从远程仓库将项目源码拉取到本地。
-Git clone
-### 项目运行
+```
+Git clone https://github/veyhunk/Liu.git
+```
+### 项目环境搭建
 首先需要下载[Node.js](https://nodejs.org)，选择`LTS`（Long Term Support）版本，下载完成之后，在项目根目录运行：
 ```javascript
 npm install
