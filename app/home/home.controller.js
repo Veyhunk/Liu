@@ -17,6 +17,7 @@
 
         // 列表
         vm.essaysList;
+        vm.pics = [1, 2, 3, 4, 5, 6];
 
         /*----------  内部变量  ----------*/
 
@@ -50,6 +51,26 @@
         // 调用后台数据初始化
         init();
 
+        /**
+         * 激活图片弹窗的方法
+         * 
+         * @param {pic object} pic id 图片的对象，可以为空
+         */
+        vm.picView = function(id) {
+            // 检查传入的图片是否存在
+            if (id) {
+                $uibModal.open({
+                    templateUrl: 'app/shared/templates/pic.modal.html',
+                    size: 'lg',
+                    controller: function($scope) {
+                        // 绑定选中的图片
+                        $scope.id = id;
+                        $scope.pics = vm.pics;
+                    }
+                });
+                return;
+            }
+        }
 
         /**
          * 激活文章弹窗的方法
