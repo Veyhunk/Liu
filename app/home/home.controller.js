@@ -5,9 +5,9 @@
         .module('app')
         .controller('HomeCtrl', HomeCtrl);
 
-    HomeCtrl.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService', '$uibModal'];
+    HomeCtrl.$inject = ['$scope', '$sce', 'EssaysModel', 'UtilityService', '$uibModal', 'CarouselModel'];
 
-    function HomeCtrl($scope, $sce, EssaysModel, UtilityService, $uibModal) {
+    function HomeCtrl($scope, $sce, EssaysModel, UtilityService, $uibModal, CarouselModel) {
 
         let vm = this;
         /*----------  界面层资源  ----------*/
@@ -17,11 +17,11 @@
 
         // 列表
         vm.essaysList;
-        vm.pics = [1, 2, 3, 4, 5, 6];
 
         /*----------  内部变量  ----------*/
 
         let essaysModel = EssaysModel,
+            carouselModel = CarouselModel,
             utilityService = UtilityService;
 
         /*----------  内部逻辑函数  ----------*/
@@ -35,6 +35,19 @@
             // 通过页面配置 从模型层获取数据
             vm.essaysList = essaysModel.getEssays(configs);
         }
+        /**
+         * 根据参数，获取文章列表
+         * 
+         * @param {object} configs 配置
+         */
+        function getSlides(configs) {
+            // 通过页面配置 从模型层获取数据
+            vm.slides = carouselModel.getCarousel(configs).then(
+                res => {
+                    vm.slides = res.plain();
+                }
+            );
+        }
 
         /*----------  内部辅助函数  ----------*/
 
@@ -47,6 +60,7 @@
             vm.pagination = utilityService.initPagination();
             // 获取文章
             getEssays(vm.pagination.configs);
+            getSlides(vm.pagination.configs);
         }
         // 调用后台数据初始化
         init();
@@ -56,20 +70,88 @@
          * 
          * @param {pic object} pic id 图片的对象，可以为空
          */
-        vm.picView = function(id) {
-            // 检查传入的图片是否存在
-            if (id) {
-                $uibModal.open({
-                    templateUrl: 'app/shared/templates/pic.modal.html',
-                    size: 'lg',
-                    controller: function($scope) {
-                        // 绑定选中的图片
-                        $scope.id = id;
-                        $scope.pics = vm.pics;
+        vm.picView = function(pid) {
+            $uibModal.open({
+                templateUrl: 'app/shared/templates/carousel.modal.html',
+                // size: 'lg',
+                backdrop: 'false',
+                controller: function($scope) {
+                    // 绑定选中的图片
+                    var slides_1 = vm.slides;
+
+                    $scope.myInterval = 3000;
+                    $scope.noWrapSlides = false;
+                    $scope.noTransition = false;
+                    $scope.active = pid;
+                    var slides = $scope.slides = [];
+
+                    slides_1.forEach(function(slide) {
+
+                        slides.push({
+                            imageURL: slide.imageURL,
+                            title: slide.title,
+                            description: slide.description,
+                            id: slide.id
+                        });
+                    });
+                    var currIndex = slides.length;
+                    // debugger;
+
+                    $scope.addSlide = function() {
+                        var newWidth = 600 + slides.length + 1;
+                        slides.push({
+                            // imageURL: '//unsplash.it/' + newWidth + '/300',
+                            // title: ['Nice image', 'Awesome photograph', 'That is so cool', 'I love that'][slides.length % 4],
+                            // description: ['Nice image', 'Awesome photograph', 'That is so cool', 'I love that'][slides.length % 4],
+                            // id: currIndex++
+                            imageURL: slides_1[currIndex].imageURL,
+                            title: slides_1[currIndex].title,
+                            description: slides_1[currIndex].description,
+                            id: slides_1[currIndex].id
+                        });
+                        currIndex++;
+                    };
+                    // $scope.addSlide();
+
+                    $scope.randomize = function() {
+                        var indexes = generateIndexesArray();
+                        assignNewIndexesToSlides(indexes);
+                    };
+
+                    // Randomize logic below
+
+                    function assignNewIndexesToSlides(indexes) {
+                        for (var i = 0, l = slides.length; i < l; i++) {
+                            slides[i].id = indexes.pop();
+                        }
                     }
-                });
-                return;
-            }
+
+                    function generateIndexesArray() {
+                        var indexes = [];
+                        for (var i = 0; i < currIndex; ++i) {
+                            indexes[i] = i;
+                        }
+                        return shuffle(indexes);
+                    }
+
+                    // http://stackoverflow.com/questions/962802#962890
+                    function shuffle(array) {
+                        var tmp, current, top = array.length;
+
+                        if (top) {
+                            while (--top) {
+                                current = Math.floor(Math.random() * (top + 1));
+                                tmp = array[current];
+                                array[current] = array[top];
+                                array[top] = tmp;
+                            }
+                        }
+
+                        return array;
+                    }
+                }
+            });
+            return;
         }
 
         /**
