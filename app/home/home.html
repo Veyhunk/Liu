@@ -17,8 +17,8 @@
                 <div id="works" class=" clearfix grid" style="padding: 0">
                     <figure ng-repeat="slide in vm.slides" class="effect-oscar wowload fadeIn animated" style="visibility: visible; animation-name: fadeIn;"> <img ng-src="{{slide.imageURL}}" alt="img01">
                         <figcaption>
-                            <h2>书籍设计</h2>
-                            <p>让阅读时代变得更美好<br> <a ng-click="vm.picView(slide.id)" title=" 1 " data-gallery=" ">了解更多</a></p>
+                            <h2>{{slide.title}}</h2>
+                            <p>{{slide.discription}}<br> <a ng-click="vm.picView(slide.id)" title=" 1 " data-gallery=" ">了解更多</a></p>
                         </figcaption>
                     </figure>
                 </div>
