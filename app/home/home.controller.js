@@ -32,7 +32,7 @@
          * @param {object} configs 配置
          */
         function getEssays(configs) {
-            // 通过页面配置 从模型层获取数据
+            // 通过页面配置 从模型层获取数据 模型层连接API
             vm.essaysList = essaysModel.getEssays(configs);
         }
         /**
@@ -60,15 +60,16 @@
             vm.pagination = utilityService.initPagination();
             // 获取文章
             getEssays(vm.pagination.configs);
+            // 获取轮播图
             getSlides(vm.pagination.configs);
         }
-        // 调用后台数据初始化
+        // 调用后台数据初始化 
         init();
 
         /**
-         * 激活图片弹窗的方法
+         * 激活轮播图弹窗的方法
          * 
-         * @param {pic object} pic id 图片的对象，可以为空
+         * @param {pid int} pid: 当前选中的图片的id 
          */
         vm.picView = function(pid) {
             $uibModal.open({
@@ -76,7 +77,7 @@
                 size: 'lg',
                 backdrop: 'true',
                 controller: function($scope) {
-                    // 绑定选中的图片
+                    // 绑定选中的轮播图
                     var slides_1 = vm.slides;
 
                     $scope.myInterval = 3000;
