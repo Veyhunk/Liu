@@ -1,41 +1,41 @@
 [{
         "id": 0,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "书籍设计",
         "description": "让阅读时代变得更美好",
         "imageURL": "images/business/1.png"
     },
     {
         "id": 1,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "商标设计",
         "description": "帮助企业获得更好的形象认知",
         "imageURL": "images/business/2.png"
     },
     {
         "id": 2,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "字体设计",
         "description": "一套优秀的字体能帮您获得很好的阅读体验",
         "imageURL": "images/business/3.png"
     },
     {
         "id": 3,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "平面设计",
         "description": "让信息资讯变得更易捕获人心",
         "imageURL": "images/business/4.png"
     },
     {
         "id": 4,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "工业设计",
         "description": "优秀的产品也需要精致的包装设计",
         "imageURL": "images/business/5.png"
     },
     {
         "id": 5,
-        "author": "Veyhunk",
+        "author": "Giorgio12",
         "title": "UI设计",
         "description": "您的用户界面也能变得与众不同且扣人心弦",
         "imageURL": "images/business/6.png"
