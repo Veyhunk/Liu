@@ -251,7 +251,7 @@ $transition-time:.2s;
     }
     /*cover*/
     /*.container-fluid{
-    padding: 0;
+padding: 0;
 }*/
     // layout
     .flexbox {
@@ -379,5 +379,33 @@ $transition-time:.2s;
         #option {
             margin-right: 1em;
         }
+    }
+}
+
+.for-mobile {
+    display: none;
+}
+
+.for-pc {
+    display: block;
+}
+
+#DesignBusiness {
+    padding-top: 3.5em;
+}
+
+@media screen and (max-width: 640px) {
+    .for-pc {
+        display: none;
+    }
+    .for-mobile {
+        display: block;
+    }
+    #DesignBusiness {
+        padding-top: 2.75em;
+    }
+    .navbar-collapse {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
