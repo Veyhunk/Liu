@@ -30,7 +30,7 @@ Giorgio.WEB
 ### 拉取项目
 首先运行如下命令，从远程仓库将项目源码拉取到本地。
 ```
-Git clone https://github/veyhunk/Liu.git
+Git clone https://github.com/veyhunk/Liu.git
 ```
 ### 项目环境搭建
 首先需要下载[Node.js](https://nodejs.org)，选择`LTS`（Long Term Support）版本，下载完成之后，在项目根目录运行：
