@@ -1,0 +1,106 @@
+<div>
+    <div style=""><button type="button" id="my-close" ng-click="$close()" aria-label="Close"><p aria-hidden="true">&times;</p></button>
+
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" no-transition="false" no-pause="true">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.imageURL}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <h4>{{slide.title}}</h4>
+                    <p>{{slide.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .modal-content {
+        background-color: transparent;
+        /*background-color: rgba(0, 0, 0, .55);*/
+        border-width: 0px;
+        box-shadow: none;
+    }
+    
+    .carousel {
+        background-color: transparent;
+        background-image: none;
+        padding: 0;
+    }
+    
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    
+    .carousel-control:hover {
+        /*background-color: rgba(0, 0, 0, .55);*/
+        color: white;
+    }
+    
+    .carousel-control {
+        color: white;
+    }
+    
+    .modal-dialog div {
+        height: 100%;
+    }
+    
+    .carousel-caption {
+        height: 100px !important;
+    }
+    
+    .item img {
+        height: 100%;
+    }
+    
+    #my-close {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999999;
+        opacity: .80;
+        color: white !important;
+        padding: 40px 0 0 41px;
+        margin-top: -60px;
+    }
+    
+    #my-close:hover {
+        color: red !important;
+        opacity: 1;
+    }
+    
+    @media (max-width: 767px) {
+        .carousel-caption,
+        .carousel-control,
+        .carousel-indicators {
+            display: block;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .item img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            margin-top: -35% !important;
+            left: 0;
+        }
+    }
+    
+    .modal-backdrop {
+        opacity: 0.6 !important;
+        background-color: black;
+    }
+    
+    .carousel-indicators {
+        margin: 0;
+    }
+    
+    body #page-wrapper {
+        -moz-filter: blur(1.5px);
+        -webkit-filter: blur(1.5px);
+        -ms-filter: blur(1.5px);
+        filter: blur(1.5px);
+    }
+</style>

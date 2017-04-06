@@ -1,0 +1,54 @@
+@import '../shared/sass/variables.scss';
+$height: 100vh;
+$width: 100vw;
+#login-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: $color-basic-background;
+    #login-brand {
+        padding: $dimens-padding;
+        position: absolute;
+        right: 0;
+        h3 {
+            color: $color-basic-text;
+            margin: 0;
+        }
+    }
+    #login-content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        height: 30 * $dimens-dp;
+        &>div {
+            height: 30 * $dimens-dp;
+        }
+        #login-product {
+            width: 100%;
+            background-color: $color-app-primary;
+        }
+        #login-dialog {
+            width: 30 * $dimens-dp;
+            background-color: $color-basic-bg-component;
+        }
+    }
+}
+
+.logo-large {
+    img {
+        width: 12 * $dimens-dp;
+        height: 12 * $dimens-dp;
+    }
+    i {
+        color: $color-app-primary;
+        width: 12 * $dimens-dp;
+        height: 12 * $dimens-dp;
+        line-height: 12 * $dimens-dp;
+        text-align: center;
+        font-size: 8 * $dimens-dp;
+    }
+}

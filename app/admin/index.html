@@ -1,0 +1,64 @@
+<!-- 后台管理 -->
+<section id="banner">
+    <div class="inner">
+        <h2><strong>后台管理</strong></h2>
+    </div>
+</section>
+<!-- 管理-->
+<section id="wrapper">
+    <!-- 文章管理 -->
+    <section id="one" class="wrapper style2" ng-controller="EssayManage as vm">
+        <div id="EssayManage" class="inner">
+            <div class="content">
+                <h2 id="content-page-title" class="major">文章管理</h2>
+                <div class="content-page-body">
+                    <!--导航操作栏-->
+                    <nav class="navbar navbar-toolbar navbar-default">
+                        <ul class="nav navbar-nav navbar-left">
+                            <li><a class="btn-clear" ng-click="vm.essayView()"><i class="fa fa-plus"></i> 添加</a></li>
+                            <li><a class="btn-clear" ng-click="vm.resetEssays()"><i class="fa fa-refresh"></i> 重置</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right  padding-0">
+                            <li><input name="searchBox" type="text" class="input-clear" ng-model="titleFilter" placeholder="搜索"></li>
+                        </ul>
+                    </nav>
+                    <!--文章列表区域-->
+                    <div id="essaylist">
+                        <div ng-repeat="essay in vm.essaysList|filter:titleFilter">
+                            <div id="essay" ng-click="vm.essayView(essay)">
+
+                                <div id="image" class="image"><img src="{{essay.imageURL}}" alt="" class="feature-image" /></div>
+                                <h2 id="title">{{essay.title}}</h2>
+                                <p id="detail"><span id="datetime">{{essay.datetime}}</span>　　<span id="viewCount">{{essay.id}}</span>人浏览 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--分页-->
+                    <div class="Pagination pull-right">
+                        <nav aria-label="...">
+                            <!--<ul class="pagination">
+                                <li class="disabled"><a href="" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                <li class="active"><a href="">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li><a href="">5</a></li>
+                                <li><a href="" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                            </ul>-->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
+<!-- copyright -->
+<section id="footer">
+    <div id="copyright" class="inner">
+        <ul class="copyright">
+            <li>2016-2017. &copy;版权所有.</li>
+            <li>Design: GIORGIO12 Design Firm</li>
+        </ul>
+    </div>
+</section>
