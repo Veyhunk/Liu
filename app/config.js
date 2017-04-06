@@ -5,7 +5,7 @@
         .module('app.configs', [])
         .config(['RestangularProvider', function(RestangularProvider) {
 
-            RestangularProvider.setBaseUrl('http://localhost:3000/API');
+            RestangularProvider.setBaseUrl('API');
 
             RestangularProvider.setDefaultHeaders({ 'Content-Type': 'application/json' });
 
