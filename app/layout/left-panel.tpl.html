@@ -1,0 +1,10 @@
+<aside>
+    <a href="" class="btn-block btn-menu-toggle" ng-click="layout.isShortcutMenusMini=!layout.isShortcutMenusMini"><span class="icon"><i class="fa fa-reorder"></i></span><span class="text">快捷菜单</span></a>
+    <nav class="nav-group-vertical">
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-repeat="item in layout.shortcutMenus | orderBy:'sort'" ui-sref-active="active">
+                <a ui-sref="{{item.url}}"><span class="icon"><i class="fa fa-star"></i></span><span class="text">{{item.name}}</span></a>
+            </li>
+        </ul>
+    </nav>
+</aside>

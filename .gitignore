@@ -1,10 +1,3 @@
-*.orig
-# 不上传组件目录，直接使用npm和bower来安装
-node_modules/
 bower_components/
-
-.DS_Store
-.idea
-*.ini
-debug.log
+node_modules/
 .vscode/

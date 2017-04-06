@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "operator": null,
+    "name": "超级管理员",
+    "remark": "@string"
+},{
+    "id": 2,
+    "operator": 1,
+    "name": "分店管理员",
+    "remark": "@string"
+},{
+    "id": 3,
+    "operator": 1,
+    "name": "库存管理员",
+    "remark": "@string"
+}]
