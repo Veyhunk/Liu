@@ -4218,7 +4218,7 @@ figcaption a:hover {
 padding: 0;
 }*/ }
   #root *:not([class~=fa]) {
-    font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+    font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif, Glyphicons Halflings !important;
     -webkit-font-smoothing: antialiased; }
   #root body {
     font-size: 1.32rem; }
@@ -4485,7 +4485,7 @@ padding: 0;
         width: 5em; }
 
 .modal *:not([class~=fa]) {
-  font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+  font-family: Microsoft Yahei, Glyphicons Halflings, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
   -webkit-font-smoothing: antialiased; }
 
 .modal button {

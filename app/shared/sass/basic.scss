@@ -5,7 +5,7 @@ $transition-time:.2s;
 #root {
     /*font family*/
     *:not([class~=fa]) {
-        font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+        font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif, Glyphicons Halflings !important;
         -webkit-font-smoothing: antialiased;
     }
     //frame
@@ -335,7 +335,7 @@ padding: 0;
 
 .modal {
     *:not([class~=fa]) {
-        font-family: Microsoft Yahei, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
+        font-family: Microsoft Yahei, Glyphicons Halflings, -apple-system, Helvetica Neue, Verdana, Helvetica, STXihei, Hiragino Sans GB, WenQuanYi Micro Hei, Aril, sans-serif !important;
         -webkit-font-smoothing: antialiased;
     }
     button {
